@@ -1,5 +1,13 @@
+import { Global } from "@emotion/react";
+import GlobalStyle from "@styles/global";
+
 function App() {
-  return <h1>Hello Agoda</h1>;
+  return (
+    <>
+      <Global styles={GlobalStyle} />
+      <h1>Hello Agoda</h1>
+    </>
+  );
 }
 
 export default App;
