@@ -21,6 +21,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
+    "jsxImportSource": "@emotion/react",
 
     "baseUrl": ".",
     "paths": {
@@ -29,9 +30,9 @@
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@pages/*": ["./src/pages/*"],
-      "@routes/*": ["./src/router/*"],
+      "@routes/*": ["./src/routes/*"],
       "@styles/*": ["./src/styles/*"],
-      "@types/*": ["./src/types/*"],
+      "@app-types/*": ["./src/types/*"],
       "@utils/*": ["./src/utils/*"],
       "@/*": ["./src/*"]
     }
