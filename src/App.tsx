@@ -1,17 +1,20 @@
 import { Global, ThemeProvider } from "@emotion/react";
 import GlobalStyle from "@styles/global";
-import { h1Style } from "@/App.style";
 import theme from "@styles/theme";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import pageRoutes from "@/routes/pageRoutes";
 
-function App() {
+const App = () => {
+  const router = createBrowserRouter([...pageRoutes]);
+
   return (
     <>
       <ThemeProvider theme={theme}>
         <Global styles={GlobalStyle} />
-        <h1 css={h1Style}>Hello Agoda</h1>
+        <RouterProvider router={router} />
       </ThemeProvider>
     </>
   );
-}
+};
 
 export default App;
