@@ -1,9 +1,9 @@
-import routePath from "@/routes/routePath";
+import { RouteType } from "@app-types/routeType";
 import CityPage from "@pages/CityPage/CityPage";
 import HomePage from "@pages/HomePage/HomePage";
 import HotelDetailPage from "@pages/HotelDetailPage/HotelDetailPage";
 import HotelListPage from "@pages/HotelListPage/HotelListPage";
-import { RouteType } from "@types/routeType";
+import routePath from "@routes/routePath";
 
 const pageRoutes: RouteType[] = [
   {
