@@ -23,17 +23,17 @@ const Header = ({ isPrevButton = false }: HeaderProps) => {
       <div css={headerLayout}>
         {isPrevButton ? (
           <section css={headerLeftSectionWrapper}>
-            <IcBack css={headerLeftIconStyle} />
+            <IcBack css={headerLeftIconStyle} onClick={() => navigate(-1)} />
           </section>
         ) : (
           <div></div>
         )}
 
-        <section
-          css={headerCenterSectionWrapper}
-          onClick={() => navigate(routePath.HOME)}
-        >
-          <IcLogo css={headerLogoStyle} />
+        <section css={headerCenterSectionWrapper}>
+          <IcLogo
+            css={headerLogoStyle}
+            onClick={() => navigate(routePath.HOME)}
+          />
         </section>
 
         <section css={headerRightSectionWrapper}>
