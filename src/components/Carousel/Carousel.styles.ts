@@ -3,7 +3,8 @@ import { css } from "@emotion/react";
 export const carouselContainer = css`
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 343px;
+  height: 200px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 10px;
@@ -29,7 +30,7 @@ export const imageTrack = (currentIndex: number, length: number) => css`
 export const dots = css`
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 0.8rem;
   position: absolute;
   bottom: 10px;
   width: 100%;
