@@ -1,10 +1,8 @@
 import { getButtonStyle } from './Button.style';
 
-interface ButtonProps {
-  onClick?: () => void;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant?: 'filled' | 'outlined'; 
-  disabled?: boolean;
+  variant?: 'filled' | 'outlined';
 }
 
 const Button = ({
