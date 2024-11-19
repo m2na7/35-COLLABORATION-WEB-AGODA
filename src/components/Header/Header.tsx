@@ -12,10 +12,10 @@ import routePath from "@routes/routePath";
 import { useNavigate } from "react-router-dom";
 
 interface HeaderProps {
-  isPrevButton?: boolean;
+  hasBackButton?: boolean;
 }
 
-const Header = ({ isPrevButton = false }: HeaderProps) => {
+const Header = ({ hasBackButton = false }: HeaderProps) => {
   const navigate = useNavigate();
 
   const handleLogoClick = () => {
@@ -32,14 +32,12 @@ const Header = ({ isPrevButton = false }: HeaderProps) => {
 
   return (
     <>
-      <div css={headerLayout}>
-        {isPrevButton ? (
-          <section css={headerLeftSectionWrapper}>
+      <header css={headerLayout}>
+        <section css={headerLeftSectionWrapper}>
+          {hasBackButton && (
             <IcBack css={headerLeftIconStyle} onClick={handleBackClick} />
-          </section>
-        ) : (
-          <div></div>
-        )}
+          )}
+        </section>
 
         <section css={headerCenterSectionWrapper}>
           <IcLogo css={headerLogoStyle} onClick={handleLogoClick} />
@@ -49,7 +47,7 @@ const Header = ({ isPrevButton = false }: HeaderProps) => {
           <IcCart css={headerRightIconStyle} />
           <IcMenu css={headerRightIconStyle} />
         </section>
-      </div>
+      </header>
     </>
   );
 };
