@@ -15,7 +15,7 @@ interface CarouselProps {
   thumbnail: string;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ thumbnail }) => {
+const Carousel = ({ thumbnail }: CarouselProps) => {
   const images = [thumbnail, fix1, fix2, fix3, fix4];
 
   const sliderRef = useRef<Slider>(null);
