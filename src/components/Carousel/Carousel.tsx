@@ -5,10 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import * as styles from "./Carousel.styles";
 
 //고정될 사진들
-import fix1 from "../../assets/img/fix-1.jpg";
-import fix2 from "../../assets/img/fix-2.jpg";
-import fix3 from "../../assets/img/fix-3.jpg";
-import fix4 from "../../assets/img/fix-4.jpg";
+import fix1 from "@/assets/img/fix-1.jpg";
+import fix2 from "@/assets/img/fix-2.jpg";
+import fix3 from "@/assets/img/fix-3.jpg";
+import fix4 from "@/assets/img/fix-4.jpg";
 
 // 썸네일 Props
 interface CarouselProps {
