@@ -12,7 +12,7 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <Global styles={GlobalStyle} />
-        <Carousel />
+        
         <RouterProvider router={router} />
       </ThemeProvider>
     </>
