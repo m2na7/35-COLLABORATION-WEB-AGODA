@@ -33,7 +33,5 @@ const outlinedButtonStyle = () => css`
 
 
 export const getButtonStyle = (variant: ButtonVariant, disabled: boolean) => {
-  return [
-    variant === 'filled' ? filledButtonStyle(disabled) : outlinedButtonStyle(),
-  ];
+  return variant === 'filled' ? filledButtonStyle(disabled) : outlinedButtonStyle();
 };
