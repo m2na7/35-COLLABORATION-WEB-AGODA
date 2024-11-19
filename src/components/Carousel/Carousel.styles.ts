@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 
 export const carouselContainer = css`
-  max-width: 343px;
   margin: 0 auto;
   position: relative;
 
