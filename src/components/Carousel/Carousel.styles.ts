@@ -1,45 +1,36 @@
 import { css } from "@emotion/react";
 
 export const carouselContainer = css`
-  position: relative;
-  width: 100%;
   max-width: 343px;
-  height: 200px;
   margin: 0 auto;
-  overflow: hidden;
-  border-radius: 10px;
-`;
+  position: relative;
 
-export const imageSlider = css`
-  width: 100%;
-  overflow: hidden;
-`;
+  .slick-slider {
+    height: 100%;
+  }
 
-export const imageTrack = (currentIndex: number, length: number) => css`
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(-${currentIndex * 100}%);
+  .slick-dots {
+    bottom: 10px;
 
-  img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+    li {
+      margin: 0 0.4rem;
+
+      button:before {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+        transition: color 0.3s ease;
+      }
+    }
+
+    li.slick-active button:before {
+      color: white;
+    }
   }
 `;
 
-export const dots = css`
-  display: flex;
-  justify-content: center;
-  gap: 0.8rem;
-  position: absolute;
-  bottom: 10px;
+export const image = css`
   width: 100%;
-`;
-
-export const dot = (isActive: boolean) => css`
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: ${isActive ? "white" : "rgba(255, 255, 255, 0.5)"};
-  transition: background-color 0.3s ease;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
 `;
