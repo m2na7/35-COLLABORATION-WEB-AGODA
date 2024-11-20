@@ -12,7 +12,7 @@ export const backgroundContainer = css`
   background-size: cover;
   background-position: center;
   position: relative;
-  padding: 1.2rem 1rem;
+  padding: 1.2rem 0;
 `;
 
 export const vipChipImage = css`
@@ -41,7 +41,6 @@ export const chipContainer = css`
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  
   &::-webkit-scrollbar {
     display: none;
   }

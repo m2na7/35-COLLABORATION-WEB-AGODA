@@ -31,15 +31,18 @@ const HomeHeader = () => {
         <Spacing width={0} height={16} />
 
         <BarTravel/>
-        
+
         <Spacing width={0} height={40} />
         <h3 css={text}>다른 교통편도 확인해 보세요</h3>
         <Spacing width={0} height={8} />
 
         <div css={chipContainer}>
+          <Spacing width={12} height={0} />
           {CHIP_DATA.map((chip) => (
             <Chip key={chip.label} label={chip.label} icon={chip.icon} />
           ))}
+          <Spacing width={12} height={0} />
+
         </div>
 
       </div>

@@ -10,11 +10,10 @@ import IcSeparator from '@/assets/svg/IcSeparator';
 import { containerStyle, searchIconStyle, iconStyle, buttonStyle, checkContainer, checkStyle, boxStyle, textStyle, dynamicTextStyle, checkLabelStyle, dateTextStyle, separatorStyle } from './BarTravel.style';
 
 const BarTravel = () => {
-  const [city, setCity] = useState<string | null>(null);  // 도시 이름 상태
+  const [city, setCity] = useState<string | null>(null); 
   const navigate = useNavigate();
   const location = useLocation();
 
-  // URL에서 쿼리 파라미터로 city 값 받기
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     const cityFromURL = queryParams.get('city');
@@ -25,7 +24,7 @@ const BarTravel = () => {
 
   const handleSearchClick = () => {
     if (city) {
-      navigate('/hotel-list');  // 검색 버튼 클릭 시 호텔 목록 페이지로 이동
+      navigate('/hotel-list'); 
     }
   };
 
@@ -35,7 +34,7 @@ const BarTravel = () => {
         <Spacing width={12} height={0} />
         <IcSearch css={searchIconStyle} />
         <Spacing width={12} height={0} />
-        {city ? city : "여행지/호텔명/프라이빗 하우스 검색"}  {/* 도시가 선택되면 도시 이름이 표시 */}
+        {city ? city : "여행지/호텔명/프라이빗 하우스 검색"} 
       </button>
 
       <div css={checkStyle}>
