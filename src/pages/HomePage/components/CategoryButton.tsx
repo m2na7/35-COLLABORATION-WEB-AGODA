@@ -1,8 +1,11 @@
+import { CategoryProps } from './CategoryButton.types';
+import { CategoryButtonContainer } from './CategoryButton.style';
 
-const CategoryButton = () => {
+const CategoryButton = ({ label, icon: Icon, isActive }: CategoryProps) => {
   return (
-    <div>
-
+    <div css={CategoryButtonContainer({ label, icon : Icon, isActive })}>
+      <Icon width={22} />
+      {label}
     </div>
   );
 };

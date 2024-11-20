@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import theme from '@/styles/theme'; // theme import
+import theme from '@/styles/theme';
 
 export const ChipContainer = css`
   display: inline-flex;
