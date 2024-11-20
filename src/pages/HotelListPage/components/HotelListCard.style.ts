@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import theme from '@styles/theme';
 
 const hotelCardWrapper = (theme: Theme) => css`
   display: flex;
@@ -31,7 +32,7 @@ const hotelCardImage = css`
   border-radius: 16px 0 0 16px;
 `;
 
-const hotelTitle = (theme: Theme) => css`
+const hotelTitle = css`
   ${theme.font.title4_b_16}
 `;
 
@@ -40,25 +41,25 @@ const hotelDetailWrapper = css`
   gap: 1.2rem;
 `;
 
-const hotelLocation = (theme: Theme) => css`
+const hotelLocation = css`
   display: flex;
   gap: 0.2rem;
   ${theme.font.body4_m_12}
 `;
 
-const hotelRating = (theme: Theme) => css`
+const hotelRating = css`
   ${theme.font.button2_eb_12}
   color: ${theme.color.blue300};
 `;
 
-const hotelReviewWrapper = (theme: Theme) => css`
+const hotelReviewWrapper = css`
   display: flex;
   align-items: center;
   gap: 0.4rem;
   ${theme.font.body4_m_12}
 `;
 
-const hotelReview = (theme: Theme) => css`
+const hotelReview = css`
   ${theme.font.detail3_m_12}
   color: ${theme.color.gray600};
 `;
