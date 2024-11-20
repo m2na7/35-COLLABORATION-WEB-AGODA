@@ -13,7 +13,7 @@ export const CategoryButtonContainer = ({ isActive }: CategoryProps) => {
     width: 8.2rem;
     height: 6.4rem;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: ${isActive ? 'pointer' : 'default'};
     ${theme.font.button3_sb_12}
     background-color: ${isActive ? theme.color.white : theme.color.bluegreen100};
     color: ${isActive ? theme.color.blue300 : theme.color.white};

@@ -10,4 +10,5 @@ export const ChipContainer = css`
   ${theme.font.button1_m_14}
   background-color: ${theme.color.bluegreen200};
   color: ${theme.color.white}; 
+  white-space: nowrap;
 `;
