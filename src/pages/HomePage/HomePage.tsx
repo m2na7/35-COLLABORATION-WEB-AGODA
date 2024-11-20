@@ -1,6 +1,6 @@
 import Card from "@pages/HomePage/components/Card";
 import Chip from '@pages/HomePage/components/Chip';
-import { CHIP_DATA } from '@/utils/constants/home/chipConstants'; // CHIP_DATA 배열 import
+import { CHIP_DATA } from '@/utils/constants/home/chipConstants';
 
 const HomePage = () => {
   return (
