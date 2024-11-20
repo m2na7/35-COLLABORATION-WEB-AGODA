@@ -26,19 +26,6 @@ export const categoryButtonContainer = css`
   gap: 0.9rem;
 `;
 
-export const whiteBox = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 35.5rem;
-  height: 25.5rem;
-  border-radius: 10px;
-  background-color: ${theme.color.white};
-  left: 50%;
-  z-index: 2;
-`;
-
 export const text = css`
   ${theme.font.body3_sb_12}
   color: ${theme.color.white};
@@ -56,7 +43,7 @@ export const chipContainer = css`
   -webkit-overflow-scrolling: touch;
   
   &::-webkit-scrollbar {
-    display: none; /* 크롬, 사파리에서 스크롤바 숨기기 */
+    display: none;
   }
 
   > * {

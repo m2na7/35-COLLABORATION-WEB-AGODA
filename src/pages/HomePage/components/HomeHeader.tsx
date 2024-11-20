@@ -7,7 +7,6 @@ import {
         backgroundContainer, 
         vipChipImage, 
         categoryButtonContainer,
-        whiteBox,
         text,
         chipContainer
       } from './HomeHeder.style';
@@ -32,6 +31,7 @@ const HomeHeader = () => {
         <Spacing width={0} height={16} />
 
         <BarTravel/>
+        
         <Spacing width={0} height={40} />
         <h3 css={text}>다른 교통편도 확인해 보세요</h3>
         <Spacing width={0} height={8} />

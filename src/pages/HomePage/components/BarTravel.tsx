@@ -1,20 +1,41 @@
-import { containerStyle,searchIconStyle, iconStyle, buttonStyle, checkContainer, checkStyle, boxStyle, textStyle, dynamicTextStyle, checkLabelStyle, dateTextStyle, separatorStyle } from './BarTravel.style'; // 스타일 import
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Button from '@components/Button/Button';
 import IcSearch from '@/assets/svg/IcSearch';
 import IcCheckin from '@assets/svg/IcCheckin';
 import IcCheckout from '@/assets/svg/IcCheckout';
-import IcPerson from '@/assets/svg/IcPerson';
+import IcPerson from '@assets/svg/IcPerson';
 import Spacing from './Spacing';
 import IcSeparator from '@/assets/svg/IcSeparator';
+import { containerStyle, searchIconStyle, iconStyle, buttonStyle, checkContainer, checkStyle, boxStyle, textStyle, dynamicTextStyle, checkLabelStyle, dateTextStyle, separatorStyle } from './BarTravel.style';
 
 const BarTravel = () => {
+  const [city, setCity] = useState<string | null>(null);  // 도시 이름 상태
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // URL에서 쿼리 파라미터로 city 값 받기
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const cityFromURL = queryParams.get('city');
+    if (cityFromURL) {
+      setCity(cityFromURL);
+    }
+  }, [location]);
+
+  const handleSearchClick = () => {
+    if (city) {
+      navigate('/hotel-list');  // 검색 버튼 클릭 시 호텔 목록 페이지로 이동
+    }
+  };
+
   return (
     <div css={containerStyle}>
-      <button css={buttonStyle}>
+      <button css={buttonStyle} onClick={() => navigate('/city')}>
         <Spacing width={12} height={0} />
         <IcSearch css={searchIconStyle} />
         <Spacing width={12} height={0} />
-        여행지/호텔명/프라이빗 하우스 검색
+        {city ? city : "여행지/호텔명/프라이빗 하우스 검색"}  {/* 도시가 선택되면 도시 이름이 표시 */}
       </button>
 
       <div css={checkStyle}>
@@ -22,7 +43,7 @@ const BarTravel = () => {
 
         <IcCheckin css={iconStyle} />
         <Spacing width={12} height={0} />
-        <div css={checkContainer} >
+        <div css={checkContainer}>
           <div css={checkLabelStyle}>
             체크인
           </div>
@@ -37,7 +58,7 @@ const BarTravel = () => {
 
         <IcCheckout css={iconStyle} />
         <Spacing width={12} height={0} />
-        <div css={checkContainer} >
+        <div css={checkContainer}>
           <div css={checkLabelStyle}>
             체크아웃
           </div>
@@ -61,10 +82,9 @@ const BarTravel = () => {
         <span css={textStyle}>아동</span>
       </div>
 
-      <Button variant='filled' disabled={true}>
+      <Button variant="filled" disabled={!city} onClick={handleSearchClick}>
         검색하기
       </Button>
-
     </div>
   );
 };

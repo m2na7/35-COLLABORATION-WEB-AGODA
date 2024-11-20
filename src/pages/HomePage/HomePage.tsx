@@ -36,9 +36,8 @@ const HomePage = () => {
       <HomeHeader />
       
       <ListWithButton title="베스트 여행지" items={bestDestinations} />
-      <Spacing width={0} height={8} />
       <ListWithButton title="인기 도시" items={popularCities} />
-      <Spacing width={0} height={18} />
+      <Spacing width={0} height={10} />
     </>
   );
 };
