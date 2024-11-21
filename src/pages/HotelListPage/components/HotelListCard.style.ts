@@ -1,7 +1,7 @@
-import { css, Theme } from '@emotion/react';
+import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
-const hotelCardWrapper = (theme: Theme) => css`
+const hotelCardWrapper = css`
   display: flex;
   width: 95%;
   height: 18rem;
@@ -77,22 +77,22 @@ const hotelPriceWrapper = css`
   text-align: right;
 `;
 
-const hotelOriginalPrice = (theme: Theme) => css`
+const hotelOriginalPrice = css`
   ${theme.font.body4_m_12}
   color: ${theme.color.gray600};
   text-decoration: line-through;
 `;
 
-const hotelDiscountPrice = (theme: Theme) => css`
+const hotelDiscountPrice = css`
   ${theme.font.title2_sb_20}
 `;
 
-const hotelTaxPrice = (theme: Theme) => css`
+const hotelTaxPrice = css`
   ${theme.font.body4_m_12}
   color: ${theme.color.gray600};
 `;
 
-const hotelTagPrice = (theme: Theme) => css`
+const hotelTagPrice = css`
   display: flex;
   align-items: end;
   justify-content: end;
