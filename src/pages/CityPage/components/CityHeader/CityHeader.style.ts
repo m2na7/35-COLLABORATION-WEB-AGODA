@@ -57,6 +57,10 @@ export const cityHeaderInputStyle = (theme: Theme) => css`
   border: none;
   color: ${theme.color.gray400};
   ${theme.font.body2_m_14}
+
+  :focus {
+    outline: none;
+  }
 `;
 
 export const cityHeaderCancleIconStyle = css`
