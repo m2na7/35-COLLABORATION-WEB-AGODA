@@ -12,7 +12,9 @@ const OptionBar = () => {
   return (
     <div css={optionWrapper}>
       <button css={optionButton}>
-        정렬 &nbsp;|&nbsp; <span css={activeText}>추천순</span>
+        <span>정렬</span>
+        <span>|</span>
+        <span css={activeText}>추천순</span>
       </button>
 
       <button
