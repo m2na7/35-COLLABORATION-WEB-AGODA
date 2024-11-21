@@ -39,11 +39,6 @@ export const chipContainer = css`
   width: 100%;
   overflow-x: auto; 
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   > * {
     scroll-snap-align: start;

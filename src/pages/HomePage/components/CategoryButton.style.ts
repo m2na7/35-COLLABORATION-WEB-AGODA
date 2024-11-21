@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import theme from '@/styles/theme';
-import { CategoryProps } from './CategoryButton.types';
+import { CategoryProps } from './CategoryButton';
 
 export const CategoryButtonContainer = ({ isActive }: CategoryProps) => {
   return css`

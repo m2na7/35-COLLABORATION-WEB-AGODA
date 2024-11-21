@@ -1,7 +1,7 @@
 import React from 'react';
 import { CategoryButtonContainer } from './CategoryButton.style';
 
-interface CategoryProps {
+export interface CategoryProps {
   label: string;
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   isActive: boolean;

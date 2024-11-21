@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "@pages/HomePage/components/Card";
+import Card from "@pages/HomePage/components/HomeCard";
 import Button from "@components/Button/Button";
 import { titleStyle, listStyle } from './ListWithButton.style';
 

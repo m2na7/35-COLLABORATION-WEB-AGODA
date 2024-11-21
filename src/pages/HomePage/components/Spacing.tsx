@@ -1,5 +1,3 @@
-import React from 'react';
-
 type SpacingProps = {
   width: number;
   height: number;

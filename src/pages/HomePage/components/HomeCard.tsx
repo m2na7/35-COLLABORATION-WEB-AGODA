@@ -1,4 +1,4 @@
-import { CardContainer, ImageContainer, TextContainer, Title, Count } from './Card.style';
+import { CardContainer, ImageContainer, TextContainer, Title, Count } from './HomeCard.style';
 
 interface CardProps {
   imageUrl: string;

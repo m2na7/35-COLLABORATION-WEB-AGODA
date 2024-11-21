@@ -7,7 +7,7 @@ import IcCheckout from '@/assets/svg/IcCheckout';
 import IcPerson from '@assets/svg/IcPerson';
 import Spacing from './Spacing';
 import IcSeparator from '@/assets/svg/IcSeparator';
-import { containerStyle, searchIconStyle, iconStyle, buttonStyle, checkContainer, checkStyle, boxStyle, textStyle, dynamicTextStyle, checkLabelStyle, dateTextStyle, separatorStyle } from './BarTravel.style';
+import { containerStyle, searchIconStyle, iconStyle, buttonStyle, checkStyle, boxStyle, textStyle, dynamicTextStyle, checkLabelStyle, dateTextStyle, separatorStyle } from './BarTravel.style';
 
 const BarTravel = () => {
   const [city, setCity] = useState<string | null>(null); 
@@ -34,7 +34,7 @@ const BarTravel = () => {
         <Spacing width={12} height={0} />
         <IcSearch css={searchIconStyle} />
         <Spacing width={12} height={0} />
-        {city ? city : "여행지/호텔명/프라이빗 하우스 검색"} 
+          {city || "여행지/호텔명/프라이빗 하우스 검색"} 
       </button>
 
       <div css={checkStyle}>
@@ -42,7 +42,7 @@ const BarTravel = () => {
 
         <IcCheckin css={iconStyle} />
         <Spacing width={12} height={0} />
-        <div css={checkContainer}>
+        <div>
           <div css={checkLabelStyle}>
             체크인
           </div>
@@ -57,7 +57,7 @@ const BarTravel = () => {
 
         <IcCheckout css={iconStyle} />
         <Spacing width={12} height={0} />
-        <div css={checkContainer}>
+        <div>
           <div css={checkLabelStyle}>
             체크아웃
           </div>

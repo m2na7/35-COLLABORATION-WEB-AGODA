@@ -53,10 +53,6 @@ export const checkLabelStyle = css`
   color: ${theme.color.gray700};
 `;
 
-export const checkContainer = css`
-  flex-direction: column;
-`;
-
 export const dateTextStyle = css`
   ${theme.font.title4_b_16} 
   color: ${theme.color.blue300};
