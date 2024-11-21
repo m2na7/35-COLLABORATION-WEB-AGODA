@@ -1,5 +1,4 @@
-import { Theme } from "@emotion/react";
-import { css } from "@emotion/react";
+import { Theme, css } from "@emotion/react";
 
 export const cityCardLayout = css`
   display: flex;

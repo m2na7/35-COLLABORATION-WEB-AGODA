@@ -1,16 +1,30 @@
-import { cityCardChipStyle, cityCardChipWrapper, cityCardLayout, cityCardsubTitleStyle, cityCardTitleStyle, cityCardTitleWrapper } from "@pages/CityPage/components/CityCard/CityCard.style";
+import {
+  cityCardChipStyle,
+  cityCardChipWrapper,
+  cityCardLayout,
+  cityCardsubTitleStyle,
+  cityCardTitleStyle,
+  cityCardTitleWrapper,
+} from "@pages/CityPage/components/CityCard/CityCard.style";
 
-const CityCard = () => {
+interface CityCardProps {
+  cityName: string;
+  countryName: string;
+}
+
+const CityCard = ({ cityName, countryName }: CityCardProps) => {
   return (
-    <div css={cityCardLayout}>
+    <article css={cityCardLayout}>
       <div css={cityCardTitleWrapper}>
-        <span css={cityCardTitleStyle}>제주</span>
-        <span css={cityCardsubTitleStyle}>도시: 제주, 대한민국</span>
+        <span css={cityCardTitleStyle}>{cityName}</span>
+        <span css={cityCardsubTitleStyle}>
+          도시: {cityName}, {countryName}
+        </span>
       </div>
       <div css={cityCardChipWrapper}>
         <span css={cityCardChipStyle}>도시</span>
       </div>
-    </div>
+    </article>
   );
 };
 
