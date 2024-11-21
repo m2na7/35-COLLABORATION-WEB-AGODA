@@ -37,7 +37,7 @@ const HotelListCard = ({ hotel }: { hotel: HotelList }) => {
   } = hotel;
 
   return (
-    <div css={hotelCardWrapper}>
+    <article css={hotelCardWrapper}>
       {/* 좌측 이미지 */}
       <div>
         <img
@@ -97,7 +97,7 @@ const HotelListCard = ({ hotel }: { hotel: HotelList }) => {
           </p>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
