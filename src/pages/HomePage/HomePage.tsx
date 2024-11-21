@@ -2,42 +2,32 @@ import Header from "@components/Header/Header";
 import HomeHeader from "./components/HomeHeader";
 import ListWithButton from "./components/ListWithButton";
 import Spacing from "./components/Spacing";
-
-const bestDestinations = [
-  { id: 1, imageUrl: "https://via.placeholder.com/150", title: "대한민국", count: 60775 },
-  { id: 2, imageUrl: "https://via.placeholder.com/150", title: "베트남", count: 93095 },
-  { id: 3, imageUrl: "https://via.placeholder.com/150", title: "일본", count: 118033 },
-  { id: 4, imageUrl: "https://via.placeholder.com/150", title: "태국", count: 998033 },
-  { id: 5, imageUrl: "https://via.placeholder.com/150", title: "미국", count: 364310 },
-  { id: 6, imageUrl: "https://via.placeholder.com/150", title: "영국", count: 85000 },
-  { id: 7, imageUrl: "https://via.placeholder.com/150", title: "프랑스", count: 74200 },
-  { id: 8, imageUrl: "https://via.placeholder.com/150", title: "호주", count: 89200 },
-  { id: 9, imageUrl: "https://via.placeholder.com/150", title: "독일", count: 67000 },
-  { id: 10, imageUrl: "https://via.placeholder.com/150", title: "이탈리아", count: 52300 }
-];
-
-const popularCities = [
-  { id: 1, imageUrl: "https://via.placeholder.com/150", title: "서울", count: 30775 },
-  { id: 2, imageUrl: "https://via.placeholder.com/150", title: "호치민", count: 53095 },
-  { id: 3, imageUrl: "https://via.placeholder.com/150", title: "도쿄", count: 58033 },
-  { id: 4, imageUrl: "https://via.placeholder.com/150", title: "방콕", count: 78033 },
-  { id: 5, imageUrl: "https://via.placeholder.com/150", title: "로스앤젤레스", count: 964310 },
-  { id: 6, imageUrl: "https://via.placeholder.com/150", title: "런던", count: 70500 },
-  { id: 7, imageUrl: "https://via.placeholder.com/150", title: "파리", count: 82000 },
-  { id: 8, imageUrl: "https://via.placeholder.com/150", title: "시드니", count: 63000 },
-  { id: 9, imageUrl: "https://via.placeholder.com/150", title: "베를린", count: 45000 },
-  { id: 10, imageUrl: "https://via.placeholder.com/150", title: "로마", count: 34200 }
-];
-
+import { bestDestinations, popularCities } from "@/utils/mocks/homeData";
 
 const HomePage = () => {
+  // bestDestinations 변환
+  const formattedBestDestinations = bestDestinations.map(item => ({
+    id: item.countryId,
+    imageUrl: item.countryImage,
+    title: item.countryName,
+    count: item.hotelCount
+  }));
+
+  // popularCities 변환
+  const formattedPopularCities = popularCities.map(item => ({
+    id: item.cityId,
+    imageUrl: item.cityImage,
+    title: item.cityName,
+    count: item.hotelCount
+  }));
+
   return (
     <>
       <Header />
       <HomeHeader />
       
-      <ListWithButton title="베스트 여행지" items={bestDestinations} />
-      <ListWithButton title="인기 도시" items={popularCities} />
+      <ListWithButton title="베스트 여행지" items={formattedBestDestinations} />
+      <ListWithButton title="인기 도시" items={formattedPopularCities} />
       <Spacing width={0} height={10} />
     </>
   );
