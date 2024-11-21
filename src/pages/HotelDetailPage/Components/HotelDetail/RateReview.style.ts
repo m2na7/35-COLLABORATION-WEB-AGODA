@@ -28,7 +28,7 @@ export const DetailLink = styled.a`
 export const CircleEvaluationContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  gap: 24px; /* 간격을 조절할 수 있습니다 */
+  gap: 24px;
 `;
 
 export const CircleContainer = styled.div`
@@ -80,7 +80,7 @@ export const RateText = styled.div`
   }
 
   strong {
-    ${({ theme }) => theme.font.title2_sb_20};
+    ${({ theme }) => theme.font.title1_sb_26};
     color: ${({ theme }) => theme.color.blue300};
   }
 `;
@@ -99,50 +99,35 @@ export const EvaluationItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: -10px;
 
   span {
+    color: var(--mobile_web_3-grayscale-gray800, #3c3b43);
+    font-family: "Apple SD Gothic Neo";
+    font-size: 12px;
+    text-align:;
+    font-weight: bold;
+    margin-right: 12px;
     ${({ theme }) => theme.font.detail2_b_12};
-    color: ${({ theme }) => theme.color.gray800};
-    flex: 1;
-    text-align: right;
-    margin-right: 6px;
   }
 `;
 
 export const ProgressBarWrapper = styled.div`
-  flex: 2;
+  width: 121px;
+  height: 6px;
   display: flex;
   position: relative;
-  height: 8px;
+  height: 6px;
   background-color: ${({ theme }) => theme.color.gray200};
-  border-radius: 4px;
+  border-radius: 100px;
   overflow: hidden;
-`;
-
-export const ProgressBarBackground = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  svg {
-    width: 100%;
-    height: 100%;
-    fill: ${({ theme }) => theme.color.gray200};
-  }
 `;
 
 export const ProgressBarForeground = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  background-color: transparent;
-
-  svg {
-    width: 100%;
-    height: 100%;
-    fill: ${({ theme }) => theme.color.blue300};
-  }
+  height: 100%; /* 파란색 진행 막대의 높이를 배경과 동일하게 설정 */
+  background-color: ${({ theme }) => theme.color.blue300};
+  border-radius: 4px;
 `;

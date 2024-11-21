@@ -8,14 +8,12 @@ import {
   EvaluationList,
   EvaluationItem,
   ProgressBarWrapper,
-  ProgressBarBackground,
   ProgressBarForeground,
   RectangleBackground,
   CircleWrapper,
   RateText,
 } from "./RateReview.style";
 import { Ellipse27, Ellipse28 } from "@assets/svg";
-import { ProgressingBar, ProgressingBarBlue } from "@assets/svg";
 
 const RateReview = () => {
   const Rate = {
@@ -56,14 +54,9 @@ const RateReview = () => {
             <EvaluationItem key={index}>
               <span>{evaluation.label}</span>
               <ProgressBarWrapper>
-                <ProgressBarBackground>
-                  <ProgressingBar />
-                </ProgressBarBackground>
                 <ProgressBarForeground
                   style={{ width: `${evaluation.progress * 100}%` }}
-                >
-                  <ProgressingBarBlue />
-                </ProgressBarForeground>
+                />
               </ProgressBarWrapper>
             </EvaluationItem>
           ))}
