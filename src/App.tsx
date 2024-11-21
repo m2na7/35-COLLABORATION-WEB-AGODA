@@ -3,6 +3,7 @@ import GlobalStyle from "@styles/global";
 import theme from "@styles/theme";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import pageRoutes from "@/routes/pageRoutes";
+import HotelDetailPage from "@pages/HotelDetailPage/HotelDetailPage";
 
 const App = () => {
   const router = createBrowserRouter([...pageRoutes]);
@@ -11,6 +12,7 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <Global styles={GlobalStyle} />
+        <HotelDetailPage />
         <RouterProvider router={router} />
       </ThemeProvider>
     </>
