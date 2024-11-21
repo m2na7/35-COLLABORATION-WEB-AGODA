@@ -28,7 +28,7 @@ export const buttonStyle = css`
   display: flex;
   align-items: center;
   height: 4.8rem;
-  padding: 1.3rem 0 1.3rem;
+  padding: 1.3rem 0;
   border-radius: 5px;
   border: 1px solid ${theme.color.blue200};
   ${theme.font.body2_m_14}
@@ -39,7 +39,6 @@ export const buttonStyle = css`
 export const checkStyle = css`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 6.6rem;
   padding: 1.3rem 0;
   border-radius: 5px;
