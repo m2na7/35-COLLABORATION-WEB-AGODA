@@ -5,6 +5,7 @@ export const cityCardLayout = css`
   justify-content: space-between;
   align-items: center;
   padding: 0.4rem 1.5rem;
+  cursor: pointer;
 `;
 
 export const cityCardTitleWrapper = css`
