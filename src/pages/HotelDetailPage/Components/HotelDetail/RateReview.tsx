@@ -3,6 +3,7 @@ import {
   RateHeader,
   TitleStyle,
   DetailLink,
+  CircleEvaluationContainer,
   CircleContainer,
   EvaluationList,
   EvaluationItem,
@@ -37,35 +38,37 @@ const RateReview = () => {
         <DetailLink>자세히 보기 &gt;</DetailLink>
       </RateHeader>
 
-      <CircleContainer>
-        <RectangleBackground />
-        <CircleWrapper>
-          <Ellipse28 />
-          <Ellipse27 />
-          <RateText>
-            <span>{Rate.label}</span>
-            <strong>{Rate.score}</strong>
-          </RateText>
-        </CircleWrapper>
-      </CircleContainer>
+      <CircleEvaluationContainer>
+        <CircleContainer>
+          <RectangleBackground />
+          <CircleWrapper>
+            <Ellipse28 />
+            <Ellipse27 />
+            <RateText>
+              <span>{Rate.label}</span>
+              <strong>{Rate.score}</strong>
+            </RateText>
+          </CircleWrapper>
+        </CircleContainer>
 
-      <EvaluationList>
-        {Evaluations.map((evaluation, index) => (
-          <EvaluationItem key={index}>
-            <span>{evaluation.label}</span>
-            <ProgressBarWrapper>
-              <ProgressBarBackground>
-                <ProgressingBar />
-              </ProgressBarBackground>
-              <ProgressBarForeground
-                style={{ width: `${evaluation.progress * 100}%` }}
-              >
-                <ProgressingBarBlue />
-              </ProgressBarForeground>
-            </ProgressBarWrapper>
-          </EvaluationItem>
-        ))}
-      </EvaluationList>
+        <EvaluationList>
+          {Evaluations.map((evaluation, index) => (
+            <EvaluationItem key={index}>
+              <span>{evaluation.label}</span>
+              <ProgressBarWrapper>
+                <ProgressBarBackground>
+                  <ProgressingBar />
+                </ProgressBarBackground>
+                <ProgressBarForeground
+                  style={{ width: `${evaluation.progress * 100}%` }}
+                >
+                  <ProgressingBarBlue />
+                </ProgressBarForeground>
+              </ProgressBarWrapper>
+            </EvaluationItem>
+          ))}
+        </EvaluationList>
+      </CircleEvaluationContainer>
     </RateReviewWrapper>
   );
 };

@@ -23,7 +23,12 @@ export const DetailLink = styled.a`
   ${({ theme }) => theme.font.title6_b_14};
   color: ${({ theme }) => theme.color.gray600};
   text-decoration: none;
-  }
+`;
+
+export const CircleEvaluationContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 24px; /* 간격을 조절할 수 있습니다 */
 `;
 
 export const CircleContainer = styled.div`
@@ -99,6 +104,8 @@ export const EvaluationItem = styled.li`
     ${({ theme }) => theme.font.detail2_b_12};
     color: ${({ theme }) => theme.color.gray800};
     flex: 1;
+    text-align: right;
+    margin-right: 6px;
   }
 `;
 
