@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import * as styles from "./Carousel.styles";
+import { carouselContainer } from "./Carousel.styles";
 
 interface CarouselProps {
   images: string[];
@@ -31,7 +32,7 @@ const Carousel = ({ images }: CarouselProps) => {
   };
 
   return (
-    <div css={styles.carouselContainer} onWheel={handleWheel}>
+    <div css={carouselContainer} onWheel={handleWheel}>
       <Slider ref={sliderRef} {...settings}>
         {images.map((image, index) => (
           <div key={index}>
