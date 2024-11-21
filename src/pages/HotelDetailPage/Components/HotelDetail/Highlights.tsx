@@ -1,10 +1,13 @@
 import {
   HighlightsWrapper,
+  HighlightsHeader,
   TitleStyle,
   HighlightsContainer,
-  HighlightListStyle,
-  ServiceLinkStyle,
+  LeftListStyle,
+  RightListStyle,
+  ServiceStyle,
 } from "./Highlights.style";
+import IcCheck from "@assets/svg/IcCheck";
 
 const Highlights = () => {
   const leftItems = [
@@ -20,20 +23,26 @@ const Highlights = () => {
 
   return (
     <HighlightsWrapper>
-      <TitleStyle>숙소 하이라이트</TitleStyle>
+      <HighlightsHeader>
+        <TitleStyle>숙소 하이라이트</TitleStyle>
+        <ServiceStyle href="#">시설/서비스 전체보기 &gt;</ServiceStyle>
+      </HighlightsHeader>
       <HighlightsContainer>
-        <HighlightListStyle>
+        <LeftListStyle>
           {leftItems.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index}>
+              <IcCheck width="20px" height="20px" /> {item}
+            </li>
           ))}
-        </HighlightListStyle>
-        <HighlightListStyle>
+        </LeftListStyle>
+        <RightListStyle>
           {rightItems.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index}>
+              <IcCheck width="20px" height="20px" /> {item}
+            </li>
           ))}
-        </HighlightListStyle>
+        </RightListStyle>
       </HighlightsContainer>
-      <ServiceLinkStyle href="#">시설/서비스 전체보기 &gt;</ServiceLinkStyle>
     </HighlightsWrapper>
   );
 };
