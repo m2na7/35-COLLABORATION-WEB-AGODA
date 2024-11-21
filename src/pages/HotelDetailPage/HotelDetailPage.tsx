@@ -1,11 +1,11 @@
-import Highlights from "./Components/HotelDetail/Highlights";
-
+import RateReview from "./Components/HotelDetail/RateReview";
 
 const HotelDetailPage = () => {
   return (
-    <Highlights />
-  )
-
+    <>
+      <RateReview />
+    </>
+  );
 };
 
 export default HotelDetailPage;

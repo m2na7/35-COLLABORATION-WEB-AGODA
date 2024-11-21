@@ -25,7 +25,7 @@ const Highlights = () => {
     <HighlightsWrapper>
       <HighlightsHeader>
         <TitleStyle>숙소 하이라이트</TitleStyle>
-        <ServiceStyle href="#">시설/서비스 전체보기 &gt;</ServiceStyle>
+        <ServiceStyle>시설/서비스 전체보기 &gt;</ServiceStyle>
       </HighlightsHeader>
       <HighlightsContainer>
         <LeftListStyle>

@@ -1,3 +1,5 @@
+export { default as Ellipse27 } from "./Ellipse27";
+export { default as Ellipse28 } from "./Ellipse28";
 export { default as IcBack } from "./IcBack";
 export { default as IcCart } from "./IcCart";
 export { default as IcCheck } from "./IcCheck";
@@ -5,3 +7,5 @@ export { default as IcLogo } from "./IcLogo";
 export { default as IcMenu } from "./IcMenu";
 export { default as IcStar } from "./IcStar";
 export { default as IcStarBlue } from "./IcStarBlue";
+export { default as ProgressingBar } from "./ProgressingBar";
+export { default as ProgressingBarBlue } from "./ProgressingBarBlue";
