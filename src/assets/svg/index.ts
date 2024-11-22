@@ -3,6 +3,7 @@ export { default as Ellipse28 } from "./Ellipse28";
 export { default as IcBack } from "./IcBack";
 export { default as IcCart } from "./IcCart";
 export { default as IcCheck } from "./IcCheck";
+export { default as IcHead2 } from "./IcHead2";
 export { default as IcLogo } from "./IcLogo";
 export { default as IcMenu } from "./IcMenu";
 export { default as IcStar } from "./IcStar";

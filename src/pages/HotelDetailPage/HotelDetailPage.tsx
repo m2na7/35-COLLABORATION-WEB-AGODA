@@ -1,9 +1,9 @@
-import RateReview from "./Components/HotelDetail/RateReview";
+import Location from "./Components/HotelDetail/Location";
 
 const HotelDetailPage = () => {
   return (
     <>
-      <RateReview />
+     <Location />
     </>
   );
 };
