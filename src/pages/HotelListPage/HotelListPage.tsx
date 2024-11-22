@@ -38,7 +38,7 @@ const HotelListPage = () => {
         {showTimeSale && <TimeSaleSection />}
 
         <section css={cardWrapper}>
-          {HOTEL_LIST_DATA.data.map((hotel) => (
+          {HOTEL_LIST_DATA.data.hotels.map((hotel) => (
             <HotelListCard key={hotel.hotelId} hotel={hotel} />
           ))}
         </section>

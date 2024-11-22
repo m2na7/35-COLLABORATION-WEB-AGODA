@@ -12,7 +12,9 @@ import { HOTEL_LIST_DATA } from '@utils/mocks/hotelListData';
 const TimeSaleSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const timeSaleData = HOTEL_LIST_DATA.data.filter((hotel) => hotel.isTimeSale);
+  const timeSaleData = HOTEL_LIST_DATA.data.hotels.filter(
+    (hotel) => hotel.isTimeSale
+  );
 
   const handleScroll = () => {
     const container = scrollRef.current;
