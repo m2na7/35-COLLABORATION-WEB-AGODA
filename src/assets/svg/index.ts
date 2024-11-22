@@ -1,6 +1,10 @@
 export { default as IcBack } from "./IcBack";
+export { default as IcBath } from "./IcBath";
+export { default as IcBed } from "./IcBed";
 export { default as IcCart } from "./IcCart";
 export { default as IcLogo } from "./IcLogo";
 export { default as IcMenu } from "./IcMenu";
+export { default as IcPeople } from "./IcPeople";
+export { default as IcRoom } from "./IcRoom";
 export { default as IcStar } from "./IcStar";
 export { default as IcStarBlue } from "./IcStarBlue";
