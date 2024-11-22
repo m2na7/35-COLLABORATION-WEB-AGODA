@@ -1,6 +1,6 @@
 import Header from "@components/Header/Header";
-import HomeHeader from "./components/HomeHeader";
-import ListWithButton from "./components/ListWithButton";
+import HomeHeader from "./components/HomeHeader/HomeHeader";
+import ListWithButton from "./components/ListWithButton/ListWithButton";
 import Spacing from "./components/Spacing";
 import { bestDestinations, popularCities } from "@/utils/mocks/homeData";
 

@@ -1,7 +1,7 @@
 import { CATEGORY_DATA } from '@utils/constants/home/categoryConstants';
 import { CHIP_DATA } from '@utils/constants/home/chipConstants';
-import CategoryButton from '@pages/HomePage/components/CategoryButton';
-import Chip from '@pages/HomePage/components/Chip';
+import CategoryButton from '@pages/HomePage/components/CategoryButton/CategoryButton';
+import Chip from '@pages/HomePage/components/HomeChip/HomeChip';
 import homeVipChip from '@assets/img/home_vipchip.png';
 import { 
         backgroundContainer, 
@@ -10,8 +10,8 @@ import {
         text,
         chipContainer
       } from './HomeHeder.style';
-import Spacing from './Spacing';
-import BarTravel from './BarTravel';
+import Spacing from '../Spacing';
+import BarTravel from '../BarTravel/BarTravel';
 
 const HomeHeader = () => {
   return (
@@ -19,9 +19,9 @@ const HomeHeader = () => {
         <img src={homeVipChip} alt="VIP Chip" css={vipChipImage} />
         <Spacing width={0} height={16} />
         <div css={categoryButtonContainer}>
-          {CATEGORY_DATA.map((category, index) => (
+          {CATEGORY_DATA.map((category) => (
             <CategoryButton
-              key={index}
+              key={category.id}
               label={category.label}
               icon={category.icon}
               isActive={category.isActive}
@@ -39,7 +39,11 @@ const HomeHeader = () => {
         <div css={chipContainer}>
           <Spacing width={12} height={0} />
           {CHIP_DATA.map((chip) => (
-            <Chip key={chip.label} label={chip.label} icon={chip.icon} />
+            <Chip 
+              key={chip.id} 
+              label={chip.label} 
+              icon={chip.icon} 
+            />
           ))}
           <Spacing width={12} height={0} />
 

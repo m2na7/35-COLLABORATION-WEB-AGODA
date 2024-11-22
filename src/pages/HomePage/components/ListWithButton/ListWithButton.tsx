@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "@pages/HomePage/components/HomeCard";
+import Card from "@pages/HomePage/components/HomeCard/HomeCard";
 import Button from "@components/Button/Button";
 import { titleStyle, listStyle } from './ListWithButton.style';
 
@@ -10,12 +10,12 @@ interface ListItem {
   count: number;
 }
 
-interface ListWithToggleProps {
+interface ListWithButtonProps {
   title: string;
   items: ListItem[];
 }
 
-const ListWithToggle = ({ title, items }: ListWithToggleProps) => {
+const ListWithButton = ({ title, items }: ListWithButtonProps) => {
   const [visibleCount, setVisibleCount] = useState(5);
 
   const toggleVisibility = () => {
@@ -44,4 +44,4 @@ const ListWithToggle = ({ title, items }: ListWithToggleProps) => {
   );
 };
 
-export default ListWithToggle;
+export default ListWithButton;

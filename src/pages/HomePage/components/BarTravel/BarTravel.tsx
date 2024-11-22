@@ -5,9 +5,10 @@ import IcSearch from '@/assets/svg/IcSearch';
 import IcCheckin from '@assets/svg/IcCheckin';
 import IcCheckout from '@/assets/svg/IcCheckout';
 import IcPerson from '@assets/svg/IcPerson';
-import Spacing from './Spacing';
+import Spacing from '../Spacing';
 import IcSeparator from '@/assets/svg/IcSeparator';
 import { containerStyle, searchIconStyle, iconStyle, buttonStyle, checkStyle, boxStyle, textStyle, dynamicTextStyle, checkLabelStyle, dateTextStyle, separatorStyle } from './BarTravel.style';
+import routePath from '@routes/routePath';
 
 const BarTravel = () => {
   const [city, setCity] = useState<string | null>(null); 
@@ -24,13 +25,13 @@ const BarTravel = () => {
 
   const handleSearchClick = () => {
     if (city) {
-      navigate('/hotel-list'); 
+      navigate(routePath.HOTEL_LIST)
     }
   };
 
   return (
     <div css={containerStyle}>
-      <button css={buttonStyle} onClick={() => navigate('/city')}>
+      <button css={buttonStyle} onClick={() =>navigate(routePath.CITY)}>
         <Spacing width={12} height={0} />
         <IcSearch css={searchIconStyle} />
         <Spacing width={12} height={0} />

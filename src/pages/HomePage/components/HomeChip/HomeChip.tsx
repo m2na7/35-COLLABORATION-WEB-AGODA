@@ -1,4 +1,4 @@
-import { ChipContainer} from './Chip.style';
+import { ChipContainer} from './HomeChip.style';
 
 interface ChipProps {
   label: string;
