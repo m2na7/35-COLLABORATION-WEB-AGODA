@@ -41,3 +41,9 @@ export const roomDetailCardWrapper = css`
   flex-direction: column;
   gap: 2.8rem;
 `;
+
+export const roomDetailCardStyle = css`
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+`;

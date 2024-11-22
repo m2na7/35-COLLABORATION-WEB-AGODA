@@ -1,6 +1,7 @@
 import {
   rommDetailOneClickTextStyle,
   roomDetailCardContainer,
+  roomDetailCardStyle,
   roomDetailCardWrapper,
   roomDetailChipWrapper,
   roomDetailLayout,
@@ -81,7 +82,7 @@ const RoomDetail = () => {
       <section css={roomDetailCardContainer}>
         <span css={roomDetailNumberTextStyle}>총 12개 중 12개 객실 보기</span>
         <div css={roomDetailCardWrapper}>
-          <div>
+          <div css={roomDetailCardStyle}>
             <RoomDetailCard />
             <RoomDetailPriceCard />
           </div>
