@@ -1,56 +1,55 @@
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
+import { css, Theme } from "@emotion/react";
 
-export const RateReviewWrapper = styled.div`
+export const RateReviewWrapper = css`
   display: flex;
   flex-direction: column;
   padding: 16px 37px;
   background-color: #fff;
 `;
 
-export const RateHeader = styled.div`
+export const RateHeader = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
 `;
 
-export const TitleStyle = styled.h3`
-  ${({ theme }) => theme.font.title5_b_16};
-  color: ${({ theme }) => theme.color.black};
+export const TitleStyle = (theme: Theme) => css`
+  ${theme.font.title5_b_16};
+  color: ${theme.color.black};
 `;
 
-export const DetailLink = styled.a`
-  ${({ theme }) => theme.font.title6_b_14};
-  color: ${({ theme }) => theme.color.gray600};
+export const DetailLink = (theme: Theme) => css`
+  ${theme.font.title6_b_14};
+  color: ${theme.color.gray600};
   text-decoration: none;
 `;
 
-export const CircleEvaluationContainer = styled.div`
+export const CircleEvaluationContainer = css`
   display: flex;
   align-items: flex-start;
   gap: 24px;
 `;
 
-export const CircleContainer = styled.div`
+export const CircleContainer = css`
   position: relative;
   width: 120px;
   height: 120px;
   margin-bottom: 24px;
 `;
 
-export const RectangleBackground = styled.div`
+export const RectangleBackground = (theme: Theme) => css`
   position: absolute;
   top: 0;
   left: 0;
   width: 120px;
   height: 120px;
-  background-color: ${({ theme }) => theme.color.gray100};
+  background-color: ${theme.color.gray100};
   border-radius: 20px;
   z-index: 0;
 `;
 
-export const CircleWrapper = styled.div`
+export const CircleWrapper = css`
   position: absolute;
   top: 10px;
   left: 10px;
@@ -69,24 +68,24 @@ export const CircleWrapper = styled.div`
   }
 `;
 
-export const RateText = styled.div`
+export const RateText = (theme: Theme) => css`
   position: absolute;
   z-index: 2;
   text-align: center;
 
   span {
-    ${({ theme }) => theme.font.title6_b_14};
-    color: ${({ theme }) => theme.color.gray700};
+    ${theme.font.title6_b_14};
+    color: ${theme.color.gray700};
     display: block;
   }
 
   strong {
-    ${({ theme }) => theme.font.title1_sb_26};
-    color: ${({ theme }) => theme.color.blue300};
+    ${theme.font.title1_sb_26};
+    color: ${theme.color.blue300};
   }
 `;
 
-export const EvaluationList = styled.ul`
+export const EvaluationList = css`
   list-style: none;
   padding: 0;
   margin: 0;
@@ -96,7 +95,7 @@ export const EvaluationList = styled.ul`
   gap: 16px;
 `;
 
-export const EvaluationItem = styled.li`
+export const EvaluationItem = (theme: Theme) => css`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -106,29 +105,28 @@ export const EvaluationItem = styled.li`
     color: var(--mobile_web_3-grayscale-gray800, #3c3b43);
     font-family: "Apple SD Gothic Neo";
     font-size: 12px;
-    text-align:;
+    text-align: left;
     font-weight: bold;
     margin-right: 12px;
-    ${({ theme }) => theme.font.detail2_b_12};
+    ${theme.font.detail2_b_12};
   }
 `;
 
-export const ProgressBarWrapper = styled.div`
+export const ProgressBarWrapper = (theme: Theme) => css`
   width: 121px;
   height: 6px;
   display: flex;
   position: relative;
-  height: 6px;
-  background-color: ${({ theme }) => theme.color.gray200};
+  background-color: ${theme.color.gray200};
   border-radius: 100px;
   overflow: hidden;
 `;
 
-export const ProgressBarForeground = styled.div`
+export const ProgressBarForeground = (theme: Theme) => css`
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%; /* 파란색 진행 막대의 높이를 배경과 동일하게 설정 */
-  background-color: ${({ theme }) => theme.color.blue300};
+  height: 100%;
+  background-color: ${theme.color.blue300};
   border-radius: 4px;
 `;

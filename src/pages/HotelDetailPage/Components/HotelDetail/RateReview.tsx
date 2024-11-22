@@ -13,9 +13,12 @@ import {
   CircleWrapper,
   RateText,
 } from "./RateReview.style";
+import { useTheme } from "@emotion/react";
 import { Ellipse27, Ellipse28 } from "@assets/svg";
 
 const RateReview = () => {
+  const theme = useTheme(); 
+
   const Rate = {
     score: 8.3,
     label: "우수",
@@ -30,39 +33,40 @@ const RateReview = () => {
   ];
 
   return (
-    <RateReviewWrapper>
-      <RateHeader>
-        <TitleStyle>평가</TitleStyle>
-        <DetailLink>자세히 보기 &gt;</DetailLink>
-      </RateHeader>
+    <div css={RateReviewWrapper}>
+      <div css={RateHeader}>
+        <h3 css={TitleStyle(theme)}>평가</h3>
+        <a css={DetailLink(theme)}>자세히 보기 &gt;</a>
+      </div>
 
-      <CircleEvaluationContainer>
-        <CircleContainer>
-          <RectangleBackground />
-          <CircleWrapper>
+      <div css={CircleEvaluationContainer}>
+        <div css={CircleContainer}>
+          <div css={RectangleBackground(theme)} />
+          <div css={CircleWrapper}>
             <Ellipse28 />
             <Ellipse27 />
-            <RateText>
+            <div css={RateText(theme)}>
               <span>{Rate.label}</span>
               <strong>{Rate.score}</strong>
-            </RateText>
-          </CircleWrapper>
-        </CircleContainer>
+            </div>
+          </div>
+        </div>
 
-        <EvaluationList>
+        <ul css={EvaluationList}>
           {Evaluations.map((evaluation, index) => (
-            <EvaluationItem key={index}>
+            <li css={EvaluationItem(theme)} key={index}>
               <span>{evaluation.label}</span>
-              <ProgressBarWrapper>
-                <ProgressBarForeground
+              <div css={ProgressBarWrapper(theme)}>
+                <div
+                  css={ProgressBarForeground(theme)}
                   style={{ width: `${evaluation.progress * 100}%` }}
                 />
-              </ProgressBarWrapper>
-            </EvaluationItem>
+              </div>
+            </li>
           ))}
-        </EvaluationList>
-      </CircleEvaluationContainer>
-    </RateReviewWrapper>
+        </ul>
+      </div>
+    </div>
   );
 };
 
