@@ -1,6 +1,26 @@
 import { Theme } from "@emotion/react";
 import { css } from "@emotion/react";
 
+export const roomDetailCardLayout = css`
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  width: 100%;
+`;
+
+export const roomDetailCarouselStyle = css`
+  width: 100%;
+`;
+
+export const roomDetailCarouselLabelStyle = (theme: Theme) => css`
+  background-color: ${theme.color.purple200};
+  color: ${theme.color.white};
+  padding: 0.1rem 0.6rem;
+  ${theme.font.detail3_m_12};
+  width: 12.3rem;
+  height: 2.2rem;
+`;
+
 export const roomDetailCardContainer = css`
   display: flex;
   flex-direction: column;
