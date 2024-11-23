@@ -22,4 +22,5 @@ export { default as IcSim } from "./IcSim";
 export { default as IcStar } from "./IcStar";
 export { default as IcStarBlue } from "./IcStarBlue";
 export { default as IcStay } from "./IcStay";
+export { default as IcVipchip } from "./IcVipchip";
 export { default as TagLightred } from "./TagLightred";

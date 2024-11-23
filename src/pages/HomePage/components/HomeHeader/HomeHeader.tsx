@@ -2,21 +2,21 @@ import { CATEGORY_DATA } from '@utils/constants/home/categoryConstants';
 import { CHIP_DATA } from '@utils/constants/home/chipConstants';
 import CategoryButton from '@pages/HomePage/components/CategoryButton/CategoryButton';
 import Chip from '@pages/HomePage/components/HomeChip/HomeChip';
-import homeVipChip from '@assets/img/home_vipchip.png';
 import { 
         backgroundContainer, 
-        vipChipImage, 
         categoryButtonContainer,
         text,
         chipContainer
       } from './HomeHeder.style';
 import Spacing from '../Spacing';
 import BarTravel from '../BarTravel/BarTravel';
+import { IcVipchip } from '@assets/svg';
+import { iconStyle } from '@styles/iconStyles';
 
 const HomeHeader = () => {
   return (
       <div css={backgroundContainer}>
-        <img src={homeVipChip} alt="VIP Chip" css={vipChipImage} />
+        <IcVipchip css={iconStyle(10,2)}/>
         <Spacing width={0} height={16} />
         <div css={categoryButtonContainer}>
           {CATEGORY_DATA.map((category) => (

@@ -15,11 +15,6 @@ export const backgroundContainer = css`
   padding: 1.2rem 0;
 `;
 
-export const vipChipImage = css`
-  z-index: 1;
-  width: 10.8rem; 
-`;
-
 export const categoryButtonContainer = css`
   display: flex;
   justify-content: center;

@@ -31,6 +31,7 @@ export const buttonStyle = css`
   ${theme.font.body2_m_14}
   background-color: ${theme.color.white};
   color: ${theme.color.gray700};
+  cursor: pointer;
 `;
 
 export const checkStyle = css`
