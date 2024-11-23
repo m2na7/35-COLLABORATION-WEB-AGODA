@@ -12,16 +12,13 @@ export const containerStyle = css`
   gap: 0.8rem;
 `;
 
-export const iconStyle = css`
-  width: 2rem;
-  height: 2rem;
+export const searchIconStyle = css`
   color: ${theme.color.gray600};
 `;
 
-export const searchIconStyle = css`
-  width: 2.2rem;
-  height: 2.2rem;
-  color: ${theme.color.gray600};
+export const personIconStyle=css`
+  padding: 0;
+  margin: 0 0.8rem 0 1.2rem;
 `;
 
 export const buttonStyle = css`

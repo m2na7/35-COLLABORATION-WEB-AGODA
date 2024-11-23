@@ -1,14 +1,23 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Button from '@components/Button/Button';
-import IcSearch from '@/assets/svg/IcSearch';
-import IcCheckin from '@assets/svg/IcCheckin';
-import IcCheckout from '@/assets/svg/IcCheckout';
-import IcPerson from '@assets/svg/IcPerson';
+import {IcCheckin, IcCheckout, IcPerson, IcSearch, IcSeparator} from '@assets/svg'
 import Spacing from '../Spacing';
-import IcSeparator from '@/assets/svg/IcSeparator';
-import { containerStyle, searchIconStyle, iconStyle, buttonStyle, checkStyle, boxStyle, textStyle, dynamicTextStyle, checkLabelStyle, dateTextStyle, separatorStyle } from './BarTravel.style';
 import routePath from '@routes/routePath';
+import { iconStyle } from '@styles/iconStyles';
+import { 
+  searchIconStyle, 
+  containerStyle, 
+  buttonStyle, 
+  checkStyle, 
+  boxStyle, 
+  textStyle, 
+  dynamicTextStyle, 
+  checkLabelStyle, 
+  dateTextStyle, 
+  separatorStyle,
+  personIconStyle, 
+} from './BarTravel.style';
 
 const BarTravel = () => {
   const [city, setCity] = useState<string | null>(null); 
@@ -33,15 +42,14 @@ const BarTravel = () => {
     <div css={containerStyle}>
       <button css={buttonStyle} onClick={() =>navigate(routePath.CITY)}>
         <Spacing width={12} height={0} />
-        <IcSearch css={searchIconStyle} />
+        <IcSearch css={[iconStyle(2.2, 2.2), searchIconStyle]} />
         <Spacing width={12} height={0} />
           {city || "여행지/호텔명/프라이빗 하우스 검색"} 
       </button>
 
       <div css={checkStyle}>
         <Spacing width={12} height={0} />
-
-        <IcCheckin css={iconStyle} />
+        <IcCheckin css={iconStyle(2, 2)} />
         <Spacing width={12} height={0} />
         <div>
           <div css={checkLabelStyle}>
@@ -56,7 +64,7 @@ const BarTravel = () => {
         <IcSeparator css={separatorStyle} />
         <Spacing width={12} height={0} />
 
-        <IcCheckout css={iconStyle} />
+        <IcCheckout css={iconStyle(2, 2)} />
         <Spacing width={12} height={0} />
         <div>
           <div css={checkLabelStyle}>
@@ -70,9 +78,7 @@ const BarTravel = () => {
       </div>
 
       <div css={boxStyle}>
-        <Spacing width={12} height={0} />
-        <IcPerson css={iconStyle} />
-        <Spacing width={8} height={0} />
+        <IcPerson css={[iconStyle(2, 2), personIconStyle]} />
 
         <span css={dynamicTextStyle}>1 </span>
         <span css={textStyle}>객실, </span>
@@ -80,6 +86,7 @@ const BarTravel = () => {
         <span css={textStyle}>성인, </span>
         <span css={dynamicTextStyle}>0 </span>
         <span css={textStyle}>아동</span>
+
       </div>
 
       <Button variant="filled" disabled={!city} onClick={handleSearchClick}>
