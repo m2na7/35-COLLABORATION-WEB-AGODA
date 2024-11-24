@@ -8,7 +8,7 @@ export const CardContainer = css`
   height: 6.8rem;
   background-color: ${theme.color.white};
   border-radius: 5px;
-  border: 2px solid #DBDADF;
+  border: 2px solid ${theme.color.gray300};
   box-sizing: border-box;
   overflow: hidden;
   gap: 1.2rem;

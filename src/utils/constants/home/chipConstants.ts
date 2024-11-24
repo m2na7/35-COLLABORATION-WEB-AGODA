@@ -1,4 +1,4 @@
-import { IcBus, IcCarBus, IcSim, IcCar } from '@assets/svg'; // 아이콘 import
+import { IcBus, IcCarBus, IcSim, IcCar } from '@assets/svg'; 
 
 export const CHIP_DATA = [
   { id: 1, label: "eSIM", icon: IcSim },
