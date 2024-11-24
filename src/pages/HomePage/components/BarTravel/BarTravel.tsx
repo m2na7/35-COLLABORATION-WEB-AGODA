@@ -17,8 +17,8 @@ import {
   dateTextStyle, 
   separatorStyle,
   personIconStyle, 
+  cityTextStyle,
 } from './BarTravel.style';
-import theme from '@styles/theme';
 
 const BarTravel = () => {
   const [city, setCity] = useState<string | null>(null); 
@@ -45,11 +45,11 @@ const BarTravel = () => {
         <Spacing width={12} height={0} />
         <IcSearch css={[iconStyle(2.2, 2.2), searchIconStyle]} />
         <Spacing width={12} height={0} />
-        <span 
-          css={city ? theme.font.body1_b_14 : theme.font.body2_m_14}
-        >
+
+        <span css={cityTextStyle(!!city)}>
           {city || "여행지/호텔명/프라이빗 하우스 검색"}
         </span>
+        
         </button>
 
       <div css={checkStyle}>

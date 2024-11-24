@@ -28,10 +28,13 @@ export const buttonStyle = css`
   padding: 1.3rem 0;
   border-radius: 5px;
   border: 1px solid ${theme.color.blue200};
-  ${theme.font.body2_m_14}
   background-color: ${theme.color.white};
   color: ${theme.color.gray700};
   cursor: pointer;
+`;
+
+export const cityTextStyle = (hasCity: boolean) => css`
+  ${hasCity ? theme.font.body1_b_14 : theme.font.body2_m_14};
 `;
 
 export const checkStyle = css`
