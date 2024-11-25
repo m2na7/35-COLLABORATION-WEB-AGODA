@@ -75,3 +75,10 @@ export const reviewContent = (theme: Theme) => css`
   overflow: hidden;
   text-overflow: ellipsis;
 `;
+
+export const BottomStyle = (theme: Theme) => css`
+  border-bottom: 1px solid ${theme.color.gray300};
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 0.6rem;
+`;

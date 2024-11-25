@@ -8,6 +8,7 @@ import {
   reviewTitle,
   ratingWrapper,
   reviewContent,
+  BottomStyle,
 } from "./TextReview.style";
 import StarRating from "@components/StarRating/StarRating";
 
@@ -51,6 +52,7 @@ const TextReview = () => {
           </div>
         ))}
       </div>
+      <div css={BottomStyle} />
     </div>
   );
 };
