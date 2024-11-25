@@ -3,7 +3,6 @@ import { css, Theme } from "@emotion/react";
 export const RateReviewWrapper = css`
   display: flex;
   flex-direction: column;
-  padding: 16px 37px;
   background-color: #fff;
 `;
 
@@ -11,50 +10,54 @@ export const RateHeader = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
 `;
 
 export const TitleStyle = (theme: Theme) => css`
   ${theme.font.title5_b_16};
   color: ${theme.color.black};
+  margin-left: 1.6rem;
+  margin-top: 1rem;
 `;
 
 export const DetailLink = (theme: Theme) => css`
   ${theme.font.title6_b_14};
   color: ${theme.color.gray600};
   text-decoration: none;
+  margin-right: 1.7rem;
 `;
 
 export const CircleEvaluationContainer = css`
   display: flex;
   align-items: flex-start;
-  gap: 24px;
+  gap: 2.4rem;
+  margin-left: 1.8rem;
 `;
 
 export const CircleContainer = css`
   position: relative;
-  width: 120px;
-  height: 120px;
-  margin-bottom: 24px;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-bottom: 2.4rem;
 `;
 
 export const RectangleBackground = (theme: Theme) => css`
   position: absolute;
   top: 0;
   left: 0;
-  width: 120px;
-  height: 120px;
+  width: 12rem;
+  height: 12rem;
   background-color: ${theme.color.gray100};
-  border-radius: 20px;
+  border-radius: 2rem;
   z-index: 0;
 `;
 
 export const CircleWrapper = css`
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 100px;
-  height: 100px;
+  top: 1rem;
+  left: 1rem;
+  width: 10rem;
+  height: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,6 +110,7 @@ export const EvaluationItem = (theme: Theme) => css`
 `;
 
 export const ProgressBarWrapper = (theme: Theme) => css`
+  margin-right: 3.7rem;
   width: 12.1rem;
   height: 0.6rem;
   display: flex;
