@@ -24,16 +24,14 @@ export const title = (theme: Theme) => css`
 
 export const subtitleRow = css`
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const subtitle = css`
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  font-size: 14px;
-
   span {
     color: ${theme.font.detail1_m_14};
     ${theme.font.detail1_m_14}
