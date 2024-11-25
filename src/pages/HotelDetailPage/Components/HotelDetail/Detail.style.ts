@@ -26,6 +26,9 @@ export const subtitleRow = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid ${theme.color.gray300};
+  width: 34.3rem;
+  padding-bottom: 1rem;
 `;
 
 export const subtitle = css`

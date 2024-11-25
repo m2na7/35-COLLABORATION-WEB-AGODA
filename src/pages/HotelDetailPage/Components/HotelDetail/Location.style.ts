@@ -4,7 +4,6 @@ export const LocationWrapper = css`
   display: flex;
   flex-direction: column;
   padding: 1.5rem 2rem;
-  background-color: #fff;
 `;
 
 export const Header = css`

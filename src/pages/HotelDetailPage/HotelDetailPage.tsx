@@ -14,7 +14,6 @@ const HotelDetailPage = () => {
       <HeaderSelection />
       <HotelCarousel />
       <Detail />
-      <Vector48 />
       <Highlights />
       <Vector48 />
       <RateReview />
