@@ -87,38 +87,32 @@ export const RateText = (theme: Theme) => css`
 
 export const EvaluationList = css`
   list-style: none;
-  padding: 0;
-  margin: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0.6rem;
 `;
 
 export const EvaluationItem = (theme: Theme) => css`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: -10px;
 
   span {
-    color: var(--mobile_web_3-grayscale-gray800, #3c3b43);
-    font-family: "Apple SD Gothic Neo";
-    font-size: 12px;
-    text-align: left;
-    font-weight: bold;
-    margin-right: 12px;
+    margin-right: 1.2rem;
     ${theme.font.detail2_b_12};
+    text-align: right;
+    flex-grow: 1;
   }
 `;
 
 export const ProgressBarWrapper = (theme: Theme) => css`
-  width: 121px;
-  height: 6px;
+  width: 12.1rem;
+  height: 0.6rem;
   display: flex;
   position: relative;
   background-color: ${theme.color.gray200};
-  border-radius: 100px;
+  border-radius: 10rem;
   overflow: hidden;
 `;
 
@@ -128,5 +122,5 @@ export const ProgressBarForeground = (theme: Theme) => css`
   left: 0;
   height: 100%;
   background-color: ${theme.color.blue300};
-  border-radius: 4px;
+  border-radius: 0.4rem;
 `;
