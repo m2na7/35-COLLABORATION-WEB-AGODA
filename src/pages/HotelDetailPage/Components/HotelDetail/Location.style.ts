@@ -33,7 +33,6 @@ export const ContentWrapper = css`
 `;
 
 export const MapContainer = css`
-  position: relative;
   width: 7.5rem;
   height: 7.5rem;
 `;
@@ -80,11 +79,10 @@ export const NearbyItem = (theme: Theme) => css`
 `;
 
 export const IconWrapper = css`
-  width: 12px;
+  width: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
 `;
 
 export const NearbyLink = (theme: Theme) => css`

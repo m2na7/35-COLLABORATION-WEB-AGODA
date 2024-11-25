@@ -9,12 +9,9 @@ import {
   ratingWrapper,
   reviewContent,
 } from "./TextReview.style";
-import { useTheme } from "@emotion/react";
 import StarRating from "@components/StarRating/StarRating";
 
 const TextReview = () => {
-  const theme = useTheme();
-
   const reviews = [
     {
       title: "고1 딸과 엄마의 서울여행",
@@ -39,18 +36,18 @@ const TextReview = () => {
   return (
     <div css={reviewsWrapper}>
       <div css={reviewsHeader}>
-        <div css={titleStyle(theme)}>투숙객 이용 후기</div>
-        <div css={detailLink(theme)}>12,274건 &gt;</div>
+        <div css={titleStyle}>투숙객 이용 후기</div>
+        <div css={detailLink}>12,274건 &gt;</div>
       </div>
       <div css={reviewList}>
         {reviews.map((review, index) => (
-          <div key={index} css={reviewItem(theme)}>
-            <div css={reviewTitle(theme)}>{review.title}</div>
+          <div key={index} css={reviewItem}>
+            <div css={reviewTitle}>{review.title}</div>
             <div css={ratingWrapper}>
               <StarRating rating={5} variant="blue" />
               <span>{review.rating}</span>
             </div>
-            <div css={reviewContent(theme)}>{review.content}</div>
+            <div css={reviewContent}>{review.content}</div>
           </div>
         ))}
       </div>

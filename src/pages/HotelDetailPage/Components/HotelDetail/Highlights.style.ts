@@ -32,7 +32,6 @@ export const HighlightsContainer = css`
 
 export const LeftListStyle = (theme: Theme) => css`
   flex: 1;
-  list-style: none;
   padding: 1.6rem;
 
   li {
