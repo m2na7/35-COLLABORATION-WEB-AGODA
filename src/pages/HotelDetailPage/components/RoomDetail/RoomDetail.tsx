@@ -11,53 +11,8 @@ import {
 import RoomDetailCard from "@pages/HotelDetailPage/components/RoomDetailCard/RoomDetailCard";
 import RoomDetailChip from "@pages/HotelDetailPage/components/RoomDetailChip/RoomDetailChip";
 import RoomDetailPriceCard from "@pages/HotelDetailPage/components/RoomDetailPriceCard/RoomDetailPriceCard";
-
-const ROOM_DETAIL_CHIP_DATA = [
-  {
-    id: 1,
-    text: "금연",
-    number: "12",
-  },
-  {
-    id: 2,
-    text: "조식 포함",
-    number: "5",
-  },
-  {
-    id: 3,
-    text: "후지불 가능",
-    number: "8",
-  },
-  {
-    id: 4,
-    text: "예약 무료",
-    number: "3",
-  },
-  {
-    id: 5,
-    text: "무료 취소",
-    number: "1",
-  },
-];
-
-const ROOM_DETAIL_CARD_PRICE_DATA = [
-  {
-    id: 1,
-    roomName: "더블룸",
-    roomCount: 1,
-    saleType: "cashback",
-    originalPrice: "222,770",
-    discountPrice: "166,512",
-  },
-  {
-    id: 2,
-    roomName: "트윈룸",
-    roomCount: 2,
-    saleType: "coupon",
-    originalPrice: "212,370",
-    discountPrice: "97,345",
-  },
-];
+import { ROOM_DETAIL_CHIP_DATA } from "@utils/constants/roomDetailChipData";
+import { ROOM_DATA } from "@utils/mocks/roomData";
 
 const RoomDetail = () => {
   return (
@@ -83,8 +38,14 @@ const RoomDetail = () => {
         <span css={roomDetailNumberTextStyle}>총 12개 중 12개 객실 보기</span>
         <div css={roomDetailCardWrapper}>
           <div css={roomDetailCardStyle}>
-            <RoomDetailCard />
-            <RoomDetailPriceCard />
+            {ROOM_DATA.map((roomData) => {
+              return (
+                <div key={roomData.roomId}>
+                  <RoomDetailCard roomData={roomData} />
+                  <RoomDetailPriceCard />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

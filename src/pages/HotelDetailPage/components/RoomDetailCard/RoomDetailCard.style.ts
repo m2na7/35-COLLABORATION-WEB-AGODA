@@ -6,10 +6,14 @@ export const roomDetailCardLayout = css`
   flex-direction: column;
   gap: 1.4rem;
   width: 100%;
+
+  margin-bottom: 1.6rem;
 `;
 
 export const roomDetailCarouselStyle = css`
   width: 100%;
+
+  position: relative;
 `;
 
 export const roomDetailCarouselLabelStyle = (theme: Theme) => css`
@@ -19,6 +23,10 @@ export const roomDetailCarouselLabelStyle = (theme: Theme) => css`
   ${theme.font.detail3_m_12};
   width: 12.3rem;
   height: 2.2rem;
+
+  position: absolute;
+  top: 2rem;
+  z-index: 1;
 `;
 
 export const roomDetailCardContainer = css`

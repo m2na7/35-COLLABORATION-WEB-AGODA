@@ -20,27 +20,36 @@ import {
   priceInfoTextStyle,
   PriceInfoWrapper,
 } from "@pages/HotelDetailPage/components/RoomDetailPriceCard/RoomDetailPriceCard.style";
+import { ROOM_DETAIL_CARD_PRICE_DATA } from "@utils/constants/roomDetailPriceData";
 
 const RoomDetailPriceCard = () => {
+  const randomIndex = Math.floor(
+    Math.random() * ROOM_DETAIL_CARD_PRICE_DATA.length
+  );
+  const selectedRoomData = ROOM_DETAIL_CARD_PRICE_DATA[randomIndex];
+
+  const { roomName, roomCount, saleType, originalPrice, discountPrice } =
+    selectedRoomData;
+
   return (
     <section css={priceCardLayout}>
       <section css={priceCardInfoContainer}>
         <div css={priceCardInfoLeftWrapper}>
-          <span css={priceCardInfoTitle}>더블룸</span>
-          <span css={priceCardInfoText}>예약 가능한 객실 1개</span>
+          <span css={priceCardInfoTitle}>{roomName}</span>
+          <span css={priceCardInfoText}>예약 가능한 객실 {roomCount}개</span>
         </div>
 
         <div css={priceCardInfoRightWrapper}>
           <div css={priceCardInfoLabelWrapper}>
             <IcTicketGreen css={priceCardInfoLabelIconStyle} />
             <span css={priceCardInfoLabelTextStyle}>
-              캐시백 ₩ 32,995 자동 적용
+              {saleType === "캐시백" ? "캐시백" : "쿠폰"} ₩ 32,995 자동 적용
             </span>
           </div>
 
           <div css={PriceInfoWrapper}>
-            <span css={originalPriceTextStyle}>₩ 222,770</span>
-            <span css={discountPriceTextStyle}>₩ 166,512</span>
+            <span css={originalPriceTextStyle}>₩ {originalPrice}</span>
+            <span css={discountPriceTextStyle}>₩ {discountPrice}</span>
             <span css={priceInfoTextStyle}>
               1박당 요금 (세금 및 봉사료 제외)
             </span>

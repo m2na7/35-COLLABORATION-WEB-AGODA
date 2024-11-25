@@ -11,6 +11,8 @@ export const priceCardLayout = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  margin-bottom: 1rem;
 `;
 
 export const priceCardInfoContainer = css`
@@ -67,6 +69,7 @@ export const PriceInfoWrapper = css`
 export const originalPriceTextStyle = (theme: Theme) => css`
   ${theme.font.body3_sb_12}
   color: ${theme.color.gray600};
+  text-decoration: line-through;
 `;
 
 export const discountPriceTextStyle = (theme: Theme) => css`
