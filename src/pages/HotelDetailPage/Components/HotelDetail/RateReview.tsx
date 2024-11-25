@@ -17,7 +17,7 @@ import { useTheme } from "@emotion/react";
 import { Ellipse27, Ellipse28 } from "@assets/svg";
 
 const RateReview = () => {
-  const theme = useTheme(); 
+  const theme = useTheme();
 
   const Rate = {
     score: 8.3,
