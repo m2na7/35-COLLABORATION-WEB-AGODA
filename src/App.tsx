@@ -9,13 +9,11 @@ const App = () => {
   const router = createBrowserRouter([...pageRoutes]);
 
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Global styles={GlobalStyle} />
-        <HotelDetailPage />
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <Global styles={GlobalStyle} />
+      <HotelDetailPage />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 };
 
