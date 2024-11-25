@@ -43,11 +43,18 @@ export const priceCardInfoRightWrapper = css`
   gap: 0.9rem;
 `;
 
-export const priceCardInfoLabelWrapper = (theme: Theme) => css`
+export const priceCardInfoCashbackWrapper = (theme: Theme) => css`
   display: flex;
   gap: 0.3rem;
   padding: 0.1rem 0.6rem;
   background-color: ${theme.color.green100};
+`;
+
+export const priceCardInfoCouponWrapper = (theme: Theme) => css`
+  display: flex;
+  gap: 0.3rem;
+  padding: 0.1rem 0.6rem;
+  background-color: ${theme.color.red100};
 `;
 
 export const priceCardInfoLabelIconStyle = css`
@@ -55,9 +62,14 @@ export const priceCardInfoLabelIconStyle = css`
   height: 2rem;
 `;
 
-export const priceCardInfoLabelTextStyle = (theme: Theme) => css`
+export const priceCardInfoCashbackTextStyle = (theme: Theme) => css`
   ${theme.font.detail2_b_12}
   color: ${theme.color.green400};
+`;
+
+export const priceCardInfoCouponTextStyle = (theme: Theme) => css`
+  ${theme.font.detail2_b_12}
+  color: ${theme.color.red300};
 `;
 
 export const PriceInfoWrapper = css`

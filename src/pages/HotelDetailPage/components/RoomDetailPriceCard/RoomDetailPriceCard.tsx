@@ -1,4 +1,4 @@
-import { IcCart2, IcTicketGreen } from "@assets/svg";
+import { IcCart2, IcTicketGreen, IcTicketRed } from "@assets/svg";
 import {
   buyButtonStyle,
   cardButtonIcon,
@@ -8,10 +8,12 @@ import {
   discountPriceTextStyle,
   originalPriceTextStyle,
   priceCardButtonContainer,
+  priceCardInfoCashbackTextStyle,
+  priceCardInfoCashbackWrapper,
   priceCardInfoContainer,
+  priceCardInfoCouponTextStyle,
+  priceCardInfoCouponWrapper,
   priceCardInfoLabelIconStyle,
-  priceCardInfoLabelTextStyle,
-  priceCardInfoLabelWrapper,
   priceCardInfoLeftWrapper,
   priceCardInfoRightWrapper,
   priceCardInfoText,
@@ -40,12 +42,21 @@ const RoomDetailPriceCard = () => {
         </div>
 
         <div css={priceCardInfoRightWrapper}>
-          <div css={priceCardInfoLabelWrapper}>
-            <IcTicketGreen css={priceCardInfoLabelIconStyle} />
-            <span css={priceCardInfoLabelTextStyle}>
-              {saleType === "캐시백" ? "캐시백" : "쿠폰"} ₩ 32,995 자동 적용
-            </span>
-          </div>
+          {saleType === "cashback" ? (
+            <div css={priceCardInfoCashbackWrapper}>
+              <IcTicketGreen css={priceCardInfoLabelIconStyle} />
+              <span css={priceCardInfoCashbackTextStyle}>
+                캐시백 ₩ 32,995 자동 적용
+              </span>
+            </div>
+          ) : (
+            <div css={priceCardInfoCouponWrapper}>
+              <IcTicketRed css={priceCardInfoLabelIconStyle} />
+              <span css={priceCardInfoCouponTextStyle}>
+                할인쿠폰 ₩ 32,995 자동 적용
+              </span>
+            </div>
+          )}
 
           <div css={PriceInfoWrapper}>
             <span css={originalPriceTextStyle}>₩ {originalPrice}</span>
