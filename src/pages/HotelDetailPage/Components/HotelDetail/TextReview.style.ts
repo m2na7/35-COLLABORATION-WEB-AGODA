@@ -3,7 +3,6 @@ import { css, Theme } from "@emotion/react";
 export const reviewsWrapper = css`
   width: 100%;
   padding: 2rem;
-  margin-top: 3.8rem;
 `;
 
 export const reviewsHeader = css`
@@ -45,12 +44,15 @@ export const reviewItem = (theme: Theme) => css`
   gap: 8px;
   padding: 16px;
   background: ${theme.color.gray100};
-  border-radius: 8px;
+  border-radius: 10px;
 `;
 
 export const reviewTitle = (theme: Theme) => css`
   ${theme.font.detail2_b_12}
+  font-weight:0.7rem;
   color: ${theme.color.blue200};
+  //여기 글씨가 bold? 설정이 안되는 것 같은데 어떻게 설정해야 할 지 모르겠어요 ;_;
+  //맞나..?
 `;
 
 export const ratingWrapper = (theme: Theme) => css`

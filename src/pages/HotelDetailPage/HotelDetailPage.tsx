@@ -14,11 +14,11 @@ const HotelDetailPage = () => {
       <Detail />
       <Highlights />
       <Vector48 />
+      <RateReview />
+      <Vector48 />
       <TextReview />
       <Vector48 />
       <Location />
-      <Vector48 />
-      <RateReview />
     </>
   );
 };

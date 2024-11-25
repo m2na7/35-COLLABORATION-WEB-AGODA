@@ -47,7 +47,7 @@ const TextReview = () => {
           <div key={index} css={reviewItem(theme)}>
             <div css={reviewTitle(theme)}>{review.title}</div>
             <div css={ratingWrapper}>
-              <StarRating rating={5} />
+              <StarRating rating={5} variant="blue" />
               <span>{review.rating}</span>
             </div>
             <div css={reviewContent(theme)}>{review.content}</div>
