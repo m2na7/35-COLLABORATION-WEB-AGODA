@@ -12,6 +12,7 @@ import {
   RectangleBackground,
   CircleWrapper,
   RateText,
+  BottomStyle,
 } from "./RateReview.style";
 import { useTheme } from "@emotion/react";
 import { Ellipse27, Ellipse28 } from "@assets/svg";
@@ -66,6 +67,7 @@ const RateReview = () => {
           ))}
         </ul>
       </div>
+      <div css={BottomStyle} />
     </div>
   );
 };

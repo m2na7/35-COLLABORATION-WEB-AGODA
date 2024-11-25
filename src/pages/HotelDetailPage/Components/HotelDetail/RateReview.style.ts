@@ -128,3 +128,11 @@ export const ProgressBarForeground = (theme: Theme) => css`
   background-color: ${theme.color.blue300};
   border-radius: 0.4rem;
 `;
+
+export const BottomStyle = (theme: Theme) => css`
+  border-bottom: 1px solid ${theme.color.gray300};
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1.9rem;
+  padding-bottom: 0.6rem;
+`;
