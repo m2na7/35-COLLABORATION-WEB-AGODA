@@ -5,13 +5,13 @@ import Carousel from "@components/Carousel/Carousel";
 import Detail from "./Components/HotelDetail/Detail";
 import TextReview from "./Components/HotelDetail/TextReview";
 import { Vector48 } from "@assets/svg";
+//import Header from "@components/Header/Header";
 
 const HotelDetailPage = () => {
   return (
     <>
       <Carousel images={[]} />
       <Detail />
-      <Vector48 />
       <Highlights />
       <Vector48 />
       <TextReview />

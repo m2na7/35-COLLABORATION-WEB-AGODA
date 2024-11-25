@@ -1,19 +1,19 @@
 import { css, Theme } from "@emotion/react";
 
 export const HighlightsWrapper = css`
-  margin: 16px 0;
+  margin: 0rem;
 `;
 
 export const HighlightsHeader = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 1.6rem;
 `;
 
 export const TitleStyle = (theme: Theme) => css`
   ${theme.font.title5_b_16};
   color: ${theme.color.black};
-  padding: 16px 37px;
 `;
 
 export const ServiceStyle = (theme: Theme) => css`
@@ -21,48 +21,47 @@ export const ServiceStyle = (theme: Theme) => css`
   color: ${theme.color.gray600};
   text-decoration: none;
   cursor: pointer;
-  padding: 17px;
+  padding: 1.5rem;
 `;
 
 export const HighlightsContainer = css`
   display: flex;
   justify-content: space-between;
-  padding: 16px 37px;
-  gap: 6px;
+  align-items: flex-start;
 `;
 
 export const LeftListStyle = (theme: Theme) => css`
+  flex: 1;
   list-style: none;
-  padding: 0;
-  margin: 0 16px 0 0;
+  padding: 1.6rem;
 
   li {
     ${theme.font.body2_m_14};
     color: ${theme.color.black};
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 0.6rem;
 
     svg {
-      margin-right: 8px;
+      margin-right: 0.2rem;
     }
   }
 `;
 
 export const RightListStyle = (theme: Theme) => css`
+  flex: 1;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 1.6rem; /* LeftList와 동일한 padding 추가 */
 
   li {
     ${theme.font.body2_m_14};
     color: ${theme.color.black};
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 0.6rem;
 
     svg {
-      margin-right: 8px;
+      margin-right: 0.2rem;
     }
   }
 `;
