@@ -18,4 +18,5 @@ export { default as IcStarBlue } from "./IcStarBlue";
 export { default as ProgressingBar } from "./ProgressingBar";
 export { default as ProgressingBarBlue } from "./ProgressingBarBlue";
 export { default as TagLightred } from "./TagLightred";
+export { default as Vector48 } from "./Vector48";
 export { default as 베스트셀러 } from "./베스트셀러";
