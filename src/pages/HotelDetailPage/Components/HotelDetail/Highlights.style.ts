@@ -29,10 +29,6 @@ export const HighlightsContainer = css`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-bottom: 1px solid ${theme.color.gray300};
-  width: 34.3rem;
-  padding-bottom: 0.6rem;
-  white-space: nowrap;
 `;
 
 export const LeftListStyle = (theme: Theme) => css`
@@ -69,3 +65,10 @@ export const RightListStyle = (theme: Theme) => css`
     }
   }
 `;
+
+export const BottomStyle = (theme: Theme) => css`
+  border-bottom: 1px solid ${theme.color.gray300};
+  width: 90%;
+  padding-bottom: 0.6rem;
+  margin:0 auto;
+}`;

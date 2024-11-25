@@ -6,8 +6,10 @@ import {
   LeftListStyle,
   RightListStyle,
   ServiceStyle,
+  BottomStyle,
 } from "./Highlights.style";
 import IcCheck from "@assets/svg/IcCheck";
+import { Vector48 } from "@assets/svg";
 
 const Highlights = () => {
   const leftItems = [
@@ -43,6 +45,7 @@ const Highlights = () => {
           ))}
         </ul>
       </div>
+      <div css={BottomStyle} />
     </div>
   );
 };
