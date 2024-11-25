@@ -6,7 +6,6 @@ import Detail from "./Components/HotelDetail/Detail";
 import TextReview from "./Components/HotelDetail/TextReview";
 //import Header from "@components/Header/Header";
 import HeaderSelection from "./Components/HotelDetail/HeaderSelection";
-import { Vector48 } from "@assets/svg";
 
 const HotelDetailPage = () => {
   return (
@@ -15,11 +14,8 @@ const HotelDetailPage = () => {
       <HotelCarousel />
       <Detail />
       <Highlights />
-      <Vector48 />
       <RateReview />
-      <Vector48 />
       <TextReview />
-      <Vector48 />
       <Location />
     </>
   );

@@ -1,4 +1,5 @@
 import { css, Theme } from "@emotion/react";
+import theme from "@styles/theme";
 
 export const HighlightsWrapper = css`
   margin: 0rem;
@@ -28,6 +29,10 @@ export const HighlightsContainer = css`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  border-bottom: 1px solid ${theme.color.gray300};
+  width: 34.3rem;
+  padding-bottom: 0.6rem;
+  white-space: nowrap;
 `;
 
 export const LeftListStyle = (theme: Theme) => css`
