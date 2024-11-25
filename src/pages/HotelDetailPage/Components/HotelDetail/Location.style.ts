@@ -68,14 +68,14 @@ export const NearbyItem = (theme: Theme) => css`
   color: ${theme.color.black};
 
   span:first-of-type {
-    font-weight: bold;
-    width: 106px;
+    width: 10.6rem;
     white-space: nowrap;
   }
 
   span:last-of-type {
-    width: 72px;
+    width: 12rem;
     text-align: right;
+    ${theme.font.body3_sb_12}
   }
 `;
 
