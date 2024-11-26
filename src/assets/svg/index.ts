@@ -1,7 +1,6 @@
 export { default as IcActivity } from "./IcActivity";
 export { default as IcBackWhite } from "./IcBackWhite";
 export { default as IcCancle } from "./IcCancle";
-export { default as IcSearch } from "./IcSearch";
 export { default as IcBack } from "./IcBack";
 export { default as IcBus } from "./IcBus";
 export { default as IcCar } from "./IcCar";
