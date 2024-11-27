@@ -49,7 +49,7 @@ const HotelListCard = ({ hotel }: { hotel: HotelList }) => {
       <div css={hotelInfoWrapper}>
         <div css={hotelDescriptionWrapper}>
           <h2 css={hotelTitle}>{hotelName}</h2>
-          <StarRating rating={star} variant="default" />
+          <StarRating rating={star} variant='default' />
           <div css={hotelDetailWrapper}>
             <div css={hotelLocation}>
               <IcMap css={iconStyle(1.2, 2)} />
