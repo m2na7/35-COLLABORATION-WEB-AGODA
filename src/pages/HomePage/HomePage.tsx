@@ -4,8 +4,7 @@ import ListWithButton from "./components/ListWithButton/ListWithButton";
 import Spacing from "./components/Spacing";
 import { useFetchBestLocations } from '@/apis/home/bestLocations';
 import { useFetchPopularCities } from "@/apis/home/popularCity";
-import { BestDestination } from "@/types/bestDestination";
-import { PopularCity } from "@/types/popularCity";
+import { BestDestination, PopularCity } from "@app-types/homeList";
 
 const HomePage = () => {
   const { data: bestDestinations, isLoading: bestDestinationsLoading, error: bestDestinationsError } = useFetchBestLocations();

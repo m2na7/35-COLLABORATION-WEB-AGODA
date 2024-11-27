@@ -4,3 +4,9 @@ export interface BestDestination {
   hotelCount: number;
   countryImage: string;
 }
+export interface PopularCity {
+  cityId: number;
+  cityName: string;
+  hotelCount: number;
+  cityImage: string;
+}
