@@ -1,3 +1,4 @@
+import { useFetchCities } from "@/apis/useFetchCities";
 import {
   CityCardWrapper,
   CityPageLayout,
@@ -7,6 +8,9 @@ import CityHeader from "@pages/CityPage/components/CityHeader/CityHeader";
 import { cities } from "@utils/mocks/cities";
 
 const CityPage = () => {
+  const { data } = useFetchCities();
+  console.log(data);
+
   return (
     <div css={CityPageLayout}>
       <CityHeader />
