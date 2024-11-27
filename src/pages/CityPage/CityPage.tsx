@@ -5,22 +5,24 @@ import {
 } from "@pages/CityPage/CityPage.style";
 import CityCard from "@pages/CityPage/components/CityCard/CityCard";
 import CityHeader from "@pages/CityPage/components/CityHeader/CityHeader";
-import { cities } from "@utils/mocks/cities";
 
 const CityPage = () => {
   const { data } = useFetchCities();
-  console.log(data);
+
+  if (!data) {
+    return <div>도시 데이터가 없습니다.</div>;
+  }
 
   return (
     <div css={CityPageLayout}>
       <CityHeader />
       <section css={CityCardWrapper}>
-        {cities.map((cities) => {
+        {data.cities.map((city) => {
           return (
             <CityCard
-              key={cities.cityId}
-              cityName={cities.cityName}
-              countryName={cities.countryName}
+              key={city.cityId}
+              cityName={city.cityName}
+              countryName={city.countryName}
             />
           );
         })}
