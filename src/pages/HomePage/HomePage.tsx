@@ -1,46 +1,37 @@
-import { useEffect, useState } from "react";
 import Header from "@components/Header/Header";
 import HomeHeader from "./components/HomeHeader/HomeHeader";
 import ListWithButton from "./components/ListWithButton/ListWithButton";
 import Spacing from "./components/Spacing";
-import { getBestDestinations } from "@/apis/bestDestination";
-import { getPopularCities } from "@/apis/popularCity";
+import { useFetchBestLocations } from '@/apis/home/bestLocations';
+import { useFetchPopularCities } from "@/apis/home/popularCity";
 import { BestDestination } from "@/types/bestDestination";
 import { PopularCity } from "@/types/popularCity";
 
 const HomePage = () => {
-  const [bestDestinations, setBestDestinations] = useState<BestDestination[]>([]);
-  const [popularCities, setPopularCities] = useState<PopularCity[]>([]);
+  const { data: bestDestinations, isLoading: bestDestinationsLoading, error: bestDestinationsError } = useFetchBestLocations();
+  const { data: popularCities, isLoading: popularCitiesLoading, error: popularCitiesError } = useFetchPopularCities();
 
-  const formattedBestDestinations = bestDestinations.map(item => ({
+  const formattedBestDestinations = bestDestinations?.map((item: BestDestination) => ({
     id: item.countryId,
     imageUrl: item.countryImage,
     title: item.countryName,
     count: item.hotelCount,
   }));
 
-  const formattedPopularCities = popularCities.map(item => ({
+  const formattedPopularCities = popularCities?.map((item: PopularCity) => ({
     id: item.cityId,
     imageUrl: item.cityImage,
     title: item.cityName,
     count: item.hotelCount,
   }));
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const bestData = await getBestDestinations();
-        setBestDestinations(bestData);
+  if (bestDestinationsLoading || popularCitiesLoading) {
+    return <div>로딩 중</div>;
+  }
 
-        const popularData = await getPopularCities();
-        setPopularCities(popularData);
-      } catch (error) {
-        console.error("API 호출 실패:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  if (bestDestinationsError || popularCitiesError) {
+    return <div>데이터를 가져오는 데 실패했습니다.</div>;
+  }
 
   return (
     <>
