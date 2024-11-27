@@ -1,4 +1,3 @@
-import { BrowserRouter as Router } from "react-router-dom";
 import Highlights from "./Components/HotelDetail/Highlights";
 import RateReview from "./Components/HotelDetail/RateReview";
 import Location from "./Components/HotelDetail/Location";
@@ -10,7 +9,7 @@ import HeaderSelection from "./Components/HotelDetail/HeaderSelection";
 
 const HotelDetailPage = () => {
   return (
-    <Router>
+    <>
       <Header hasBackButton={true} />
       <HeaderSelection />
       <HotelCarousel />
@@ -19,7 +18,7 @@ const HotelDetailPage = () => {
       <RateReview />
       <TextReview />
       <Location />
-    </Router>
+    </>
   );
 };
 
