@@ -55,11 +55,11 @@ const RateReview = () => {
 
         <ul css={EvaluationList}>
           {Evaluations.map((evaluation, index) => (
-            <li css={EvaluationItem(theme)} key={index}>
+            <li css={EvaluationItem} key={index}>
               <span>{evaluation.label}</span>
-              <div css={ProgressBarWrapper(theme)}>
+              <div css={ProgressBarWrapper}>
                 <div
-                  css={ProgressBarForeground(theme)}
+                  css={ProgressBarForeground}
                   style={{ width: `${evaluation.progress * 100}%` }}
                 />
               </div>

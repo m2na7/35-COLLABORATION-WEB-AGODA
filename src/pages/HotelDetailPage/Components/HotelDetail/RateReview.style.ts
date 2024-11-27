@@ -31,7 +31,7 @@ export const CircleEvaluationContainer = css`
   display: flex;
   align-items: flex-start;
   gap: 2.4rem;
-  margin-left: 1.8rem;
+  margin-left: 1.6rem;
 `;
 
 export const CircleContainer = css`
@@ -110,7 +110,7 @@ export const EvaluationItem = (theme: Theme) => css`
 `;
 
 export const ProgressBarWrapper = (theme: Theme) => css`
-  margin-right: 3.7rem;
+  margin-right: 1.6rem;
   width: 12.1rem;
   height: 0.6rem;
   display: flex;
