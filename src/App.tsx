@@ -4,7 +4,6 @@ import theme from "@styles/theme";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import pageRoutes from "@/routes/pageRoutes";
 
-
 const App = () => {
   const router = createBrowserRouter([...pageRoutes]);
 
