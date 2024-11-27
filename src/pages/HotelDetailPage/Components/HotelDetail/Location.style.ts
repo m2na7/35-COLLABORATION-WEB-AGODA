@@ -32,14 +32,10 @@ export const ContentWrapper = css`
 `;
 
 export const MapContainer = css`
-  width: 7.5rem;
-  height: 7.5rem;
-`;
-
-export const MapImage = (theme: Theme) => css`
-  border: 1px solid ${theme.color.gray200};
-  border-radius: 0.625rem;
-  object-fit: cover;
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
 `;
 
 export const NearbyContainer = css`
@@ -49,13 +45,10 @@ export const NearbyContainer = css`
 `;
 
 export const NearbyList = css`
-  list-style: none;
   padding: 0;
   margin: 0;
-  margin-left: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
 `;
 
 export const NearbyItem = (theme: Theme) => css`
@@ -66,7 +59,7 @@ export const NearbyItem = (theme: Theme) => css`
   color: ${theme.color.black};
 
   span:first-of-type {
-    width: 10.6rem;
+    width: 8rem;
     white-space: nowrap;
   }
 
@@ -88,4 +81,22 @@ export const NearbyLink = (theme: Theme) => css`
   ${theme.font.body3_sb_12};
   color: ${theme.color.blue300};
   text-align: right;
+`;
+
+export const MapWrapper = css`
+  width: 7.5rem;
+  height: 7.5rem;
+`;
+
+export const MapButton = (theme: Theme) => css`
+  position: absolute;
+  bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  background-color: ${theme.color.white};
+  color: ${theme.color.blue300};
+  ${theme.font.detail2_b_12};
+  border-radius: 10rem;
+  z-index: 1; 
+  }
 `;

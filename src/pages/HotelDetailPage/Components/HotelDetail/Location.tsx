@@ -4,16 +4,15 @@ import {
   Title,
   Address,
   ContentWrapper,
-  MapContainer,
-  MapImage,
   NearbyContainer,
   NearbyList,
   NearbyItem,
   NearbyLink,
   IconWrapper,
+  MapButton,
+  MapContainer,
 } from "./Location.style";
-import locationImg from "@assets/img/location.png";
-import { IcHead2 } from "@assets/svg";
+import { IcHead2, Map } from "@assets/svg";
 
 const Location = () => {
   const rating = 8.8;
@@ -33,7 +32,8 @@ const Location = () => {
       </div>
       <div css={ContentWrapper}>
         <div css={MapContainer}>
-          <img css={MapImage} src={locationImg} />
+          <Map />
+          <div css={MapButton}>지도에서 보기</div>
         </div>
         <div css={NearbyContainer}>
           <ul css={NearbyList}>
