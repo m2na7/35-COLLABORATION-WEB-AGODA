@@ -8,11 +8,6 @@ const GlobalStyle = css`
     box-sizing: border-box;
   }
 
-  :root {
-    --min-width: 375px;
-    --max-width: 430px;
-  }
-
   html,
   body {
     font-size: 62.5%;
@@ -35,9 +30,7 @@ const GlobalStyle = css`
   }
 
   #root {
-    width: 100%;
-    min-width: var(--min-width);
-    max-width: var(--max-width);
+    width: 375px;
     min-height: 100dvh;
     background-color: #fff;
     margin: 0 auto;
