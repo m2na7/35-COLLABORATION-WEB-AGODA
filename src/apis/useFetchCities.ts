@@ -1,29 +1,10 @@
-import { get } from "@/apis/instance";
-import { QUERY_KEY } from "@/apis/queryKeys";
+import { instance } from "@/apis/instance";
 import { useQuery } from "@tanstack/react-query";
 import { END_POINT } from "@utils/constants/api/api";
 
-export type CitiesGetResponse = {
-  cities: CitiesType[];
-};
-
-export type CitiesType = {
-  cityId: number;
-  cityName: string;
-  countryName: string;
-};
-
-export interface ApiResponseType<T> {
-  code: number;
-  message: string;
-  data: T;
-}
-
-const getCities = async (): Promise<CitiesGetResponse> => {
+const getCities = async () => {
   try {
-    const response = await get<ApiResponseType<CitiesGetResponse>>(
-      END_POINT.GET_CITIES
-    );
+    const response = await instance.get(END_POINT.GET_CITIES);
     return response.data.data;
   } catch (error) {
     console.log(error);
@@ -33,7 +14,7 @@ const getCities = async (): Promise<CitiesGetResponse> => {
 
 export const useFetchCities = () => {
   return useQuery({
-    queryKey: [QUERY_KEY.CITIES],
+    queryKey: ["cities"],
     queryFn: getCities,
   });
 };

@@ -6,6 +6,12 @@ import {
 import CityCard from "@pages/CityPage/components/CityCard/CityCard";
 import CityHeader from "@pages/CityPage/components/CityHeader/CityHeader";
 
+export type CitiesType = {
+  cityId: number;
+  cityName: string;
+  countryName: string;
+};
+
 const CityPage = () => {
   const { data } = useFetchCities();
 
@@ -17,7 +23,7 @@ const CityPage = () => {
     <div css={CityPageLayout}>
       <CityHeader />
       <section css={CityCardWrapper}>
-        {data.cities.map((city) => {
+        {data.cities.map((city: CitiesType) => {
           return (
             <CityCard
               key={city.cityId}
