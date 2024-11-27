@@ -1,5 +1,5 @@
-import { IcFilter, IcMap, IcSearch } from '@assets/svg';
-import { iconStyle } from '@styles/iconStyles';
+import { IcFilter, IcMap, IcSearch } from "@assets/svg";
+import { iconStyle } from "@styles/iconStyles";
 import {
   hotelListHeaderWrapper,
   location,
@@ -8,14 +8,18 @@ import {
   searchIcon,
   dot,
   iconBorder,
-} from './SearchBar.style';
+} from "./SearchBar.style";
 
-const SearchBar = () => {
+interface SearchBarProps {
+  city: string;
+}
+
+const SearchBar = ({ city }: SearchBarProps) => {
   return (
     <div css={hotelListHeaderWrapper}>
       <div css={searchBar}>
         <div>
-          <h1 css={location}>서울</h1>
+          <h1 css={location}>{city}</h1>
           <div css={searchInfo}>
             <p>11월 23일 - 11월 24일</p>
             <div css={dot} />

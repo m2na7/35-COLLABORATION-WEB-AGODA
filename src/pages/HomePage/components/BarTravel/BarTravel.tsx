@@ -35,7 +35,7 @@ const BarTravel = () => {
 
   const handleSearchClick = () => {
     if (city) {
-      navigate(routePath.HOTEL_LIST)
+      navigate(`${routePath.HOTEL_LIST}?city=${city}`)
     }
   };
 

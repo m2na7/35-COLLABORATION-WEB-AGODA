@@ -1,21 +1,23 @@
-import { useState } from 'react';
-import Header from '@components/Header/Header';
-import SaleBox from './components/SaleBox';
-import SearchBar from './components/SearchBar';
-import OptionBar from './components/OptionBar';
-import HotelListFooter from './components/HotelListFooter';
-import TimeSaleSection from './components/TimeSaleSection';
+import { useState } from "react";
+import Header from "@components/Header/Header";
+import SaleBox from "./components/SaleBox";
+import SearchBar from "./components/SearchBar";
+import OptionBar from "./components/OptionBar";
+import HotelListFooter from "./components/HotelListFooter";
+import TimeSaleSection from "./components/TimeSaleSection";
 import { HOTEL_LIST_DATA } from "@utils/mocks/hotelListData";
 import HotelListCard from "@pages/HotelListPage/components/HotelListCard/HotelListCard";
 import {
   hotelListHeaderContainer,
   cardWrapper,
   hotelListWrapper,
-} from './HotelListPage.style';
-
+} from "./HotelListPage.style";
 
 const HotelListPage = () => {
+  const queryParams = new URLSearchParams(location.search);
+  const cityFromURL = queryParams.get("city");
   const [showTimeSale, setShowTimeSale] = useState(false);
+  const [city] = useState(cityFromURL || "");
 
   const toggleTimeSale = () => {
     setShowTimeSale((prev) => !prev);
@@ -26,7 +28,7 @@ const HotelListPage = () => {
       <Header hasBackButton={true} />
 
       <div css={hotelListHeaderContainer}>
-        <SearchBar />
+        <SearchBar city={city} />
         <OptionBar
           toggleTimeSale={toggleTimeSale}
           showTimeSale={showTimeSale}
