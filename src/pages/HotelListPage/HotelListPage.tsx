@@ -1,15 +1,17 @@
-import { HOTEL_LIST_DATA } from '@utils/mocks/hotelListData';
-import HotelListCard from './components/HotelListCard';
+import { HOTEL_LIST_DATA } from "@utils/mocks/hotelListData";
+import HotelListCard from "./components/HotelListCard/HotelListCard";
 import {
   hotelListHeaderContainer,
   cardWrapper,
   hotelListWrapper,
-} from './HotelListPage.style';
-import Header from '@components/Header/Header';
-import SaleBox from './components/SaleBox';
-import SearchBar from './components/SearchBar';
-import OptionBar from './components/OptionBar';
-import HotelListFooter from './components/HotelListFooter';
+} from "./HotelListPage.style";
+import Header from "@components/Header/Header";
+import SaleBox from "./components/SaleBox";
+import SearchBar from "./components/SearchBar";
+import OptionBar from "./components/OptionBar";
+import HotelListFooter from "./components/HotelListFooter";
+import { useState } from "react";
+import TimeSaleSection from "./components/TimeSaleSection";
 
 const HotelListPage = () => {
   const [showTimeSale, setShowTimeSale] = useState(false);
