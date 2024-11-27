@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'; 
-import { instance } from '../instance'; 
+import { instance } from '@/apis/instance'; 
 import { END_POINT } from '@utils/constants/api/api'; 
 
 const getPopularCities = async () => {
