@@ -34,6 +34,7 @@ const dot = css`
 
 const searchIcon = css`
   margin-right: 0.1rem;
+
 `;
 
 const location = css`
