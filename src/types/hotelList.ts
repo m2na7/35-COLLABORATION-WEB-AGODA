@@ -11,4 +11,9 @@ export interface HotelList {
   isLiked: boolean;
   isQuarterDiscount: boolean;
   hotelImage?: string;
+  isTimeSale: boolean;
+}
+
+export interface HotelListResponse {
+  hotels: HotelList[];
 }
