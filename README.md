@@ -112,6 +112,8 @@ agoda의 주요 기능을 모바일 웹 화면에 최적화된 UI/UX로 구현�
 |-- tsconfig.json
 |-- yarn.lock
 ```
+## 🌊 기술 스택
+[![My Skills](https://skillicons.dev/icons?i=html,css,react,ts,emotion,react-query)](https://skillicons.dev)
 
 
 ## 🌊 단체 사진
