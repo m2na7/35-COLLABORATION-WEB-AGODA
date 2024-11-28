@@ -1,5 +1,6 @@
 import StarRating from "@components/StarRating/StarRating";
 import { IcGood } from "@assets/svg";
+import { useFetchHotelDetail } from "@apis/hoteldetail/useFetchHotelDetail";
 
 import {
   detailWrapper,

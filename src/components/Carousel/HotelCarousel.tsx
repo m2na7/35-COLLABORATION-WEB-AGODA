@@ -6,9 +6,6 @@ interface HotelCarouselProps {
 }
 
 const HotelCarousel = ({ images }: HotelCarouselProps) => {
-  
-  console.log(images);
-
   const imageUrls = images ? images.map((image) => image.hotelImageUrl) : [];
 
   return (
