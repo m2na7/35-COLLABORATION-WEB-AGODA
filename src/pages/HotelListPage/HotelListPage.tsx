@@ -6,12 +6,13 @@ import OptionBar from "./components/OptionBar";
 import HotelListFooter from "./components/HotelListFooter";
 import TimeSaleSection from "./components/TimeSaleSection";
 import { HOTEL_LIST_DATA } from "@utils/mocks/hotelListData";
-import HotelListCard from "@pages/HotelListPage/components/HotelListCard/HotelListCard";
+import HotelListCard from "./components/HotelListCard/HotelListCard";
 import {
   hotelListHeaderContainer,
   cardWrapper,
   hotelListWrapper,
 } from "./HotelListPage.style";
+
 
 const HotelListPage = () => {
   const queryParams = new URLSearchParams(location.search);
