@@ -9,6 +9,8 @@ import Detail from "@pages/HotelDetailPage/components/HotelDetail/Detail";
 import TextReview from "@pages/HotelDetailPage/components/HotelDetail/TextReview";
 import HeaderSelection from "@pages/HotelDetailPage/components/HotelDetail/HeaderSelection";
 import RoomDetail from "@pages/HotelDetailPage/components/RoomDetail/RoomDetail";
+import IsLiked from "./components/HotelDetail/Like/IsLiked";
+
 import {
   HotelDetailContainer,
   HotelDetailLayout,
@@ -35,6 +37,7 @@ const HotelDetailPage = () => {
         <Header hasBackButton={true} />
         <HeaderSelection />
         <HotelCarousel images={hotelDetail.hotelImages} />
+        <IsLiked hotelId={hotelDetail.hotelId} isLiked={hotelDetail.isLiked} />
         <Detail
           hotelName={hotelDetail.hotelName}
           reservationCount={hotelDetail.reservationCount}
