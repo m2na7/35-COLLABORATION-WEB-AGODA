@@ -17,8 +17,6 @@ import { useFetchHotelList } from '@apis/hotel/useFetchHotelList';
 
 
 const HotelListPage = () => {
-  const queryParams = new URLSearchParams(location.search);
-  const city = queryParams.get("city") || "";
   const [showTimeSale, setShowTimeSale] = useState(false);
   const { cityId } = useParams();
   const { data } = useFetchHotelList(Number(cityId), 'timeLimit');
