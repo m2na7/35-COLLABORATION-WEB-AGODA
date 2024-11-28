@@ -1,22 +1,27 @@
-import { useState } from "react";
-import Header from "@components/Header/Header";
-import SaleBox from "./components/SaleBox";
-import SearchBar from "./components/SearchBar";
-import OptionBar from "./components/OptionBar";
-import HotelListFooter from "./components/HotelListFooter";
-import TimeSaleSection from "./components/TimeSaleSection";
-import { HOTEL_LIST_DATA } from "@utils/mocks/hotelListData";
-import HotelListCard from "./components/HotelListCard/HotelListCard";
+import { useState } from 'react';
+import { useParams } from 'react-router-dom';
+
+import Header from '@components/Header/Header';
+import SaleBox from './components/SaleBox';
+import SearchBar from './components/SearchBar';
+import OptionBar from './components/OptionBar';
+import HotelListFooter from './components/HotelListFooter';
+import TimeSaleSection from './components/TimeSaleSection';
+import HotelListCard from '@pages/HotelListPage/components/HotelListCard/HotelListCard';
 import {
   hotelListHeaderContainer,
   cardWrapper,
   hotelListWrapper,
-} from "./HotelListPage.style";
+} from './HotelListPage.style';
+import { useFetchHotelList } from '@apis/hotel/useFetchHotelList';
+
 
 const HotelListPage = () => {
   const queryParams = new URLSearchParams(location.search);
   const city = queryParams.get("city") || "";
   const [showTimeSale, setShowTimeSale] = useState(false);
+  const { cityId } = useParams();
+  const { data } = useFetchHotelList(Number(cityId), 'timeLimit');
 
   const toggleTimeSale = () => {
     setShowTimeSale((prev) => !prev);
@@ -27,7 +32,7 @@ const HotelListPage = () => {
       <Header hasBackButton={true} />
 
       <div css={hotelListHeaderContainer}>
-        <SearchBar city={city} />
+        <SearchBar cityId={Number(cityId)} />
         <OptionBar
           toggleTimeSale={toggleTimeSale}
           showTimeSale={showTimeSale}
@@ -36,11 +41,9 @@ const HotelListPage = () => {
 
       <div css={hotelListWrapper}>
         <SaleBox />
-
-        {showTimeSale && <TimeSaleSection />}
-
+        {showTimeSale && data && <TimeSaleSection data={data.timeSaleHotels} />}
         <section css={cardWrapper}>
-          {HOTEL_LIST_DATA.data.hotels.map((hotel) => (
+          {data?.nonTimeSaleHotels.map((hotel) => (
             <HotelListCard key={hotel.hotelId} hotel={hotel} />
           ))}
         </section>

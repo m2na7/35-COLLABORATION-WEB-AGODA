@@ -10,16 +10,20 @@ import {
   iconBorder,
 } from "./SearchBar.style";
 
-interface SearchBarProps {
-  city: string;
-}
+const cityNames: Record<number, string> = {
+  1: '서울',
+  2: '제주',
+  6: '부산',
+};
 
-const SearchBar = ({ city }: SearchBarProps) => {
+const SearchBar = ({ cityId }: { cityId: number }) => {
+  const cityName = cityNames[cityId];
+
   return (
     <div css={hotelListHeaderWrapper}>
       <div css={searchBar}>
         <div>
-          <h1 css={location}>{city}</h1>
+          <h1 css={location}>{cityName}</h1>
           <div css={searchInfo}>
             <p>11월 23일 - 11월 24일</p>
             <div css={dot} />
