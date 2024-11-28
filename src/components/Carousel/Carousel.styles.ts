@@ -27,8 +27,10 @@ export const carouselContainer = css`
   }
 `;
 
-export const image = css`
+export const carouselImageStyle = (variant: string) => css`
   width: 100%;
   height: auto;
   object-fit: cover;
+
+  border-radius: ${variant === "round" ? "10px" : "0px"};
 `;

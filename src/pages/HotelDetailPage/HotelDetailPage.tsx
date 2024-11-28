@@ -13,7 +13,7 @@ const HotelDetailPage = () => {
     <>
       <Header hasBackButton={true} />
       <HeaderSelection />
-      <HotelCarousel hotelId={1} />
+      <HotelCarousel />
       <Detail />
       <Highlights />
       <RateReview />
