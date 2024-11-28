@@ -1,8 +1,13 @@
 import { useFetchHotelDetail } from "@/apis/hoteldetail/useFetchHotelDetail";
 import Carousel from "./Carousel";
 
-const HotelCarousel = () => {
-  const { data, isLoading, isError } = useFetchHotelDetail();
+type HotelCarouselProps = {
+  hotelId: number;
+};
+
+const HotelCarousel = ({ hotelId }: HotelCarouselProps) => {
+  const { data, isLoading, isError } = useFetchHotelDetail(hotelId);
+  console.log(data);
 
   if (isLoading) {
     return <div>Loading...</div>;

@@ -2,18 +2,19 @@ import { useQuery } from "@tanstack/react-query";
 import { instance } from "../instance";
 import { END_POINT } from "@utils/constants/api/api";
 
-const getHotelDetail = async () => {
+const getHotelDetail = async (hotelId: number) => {
   try {
-    const response = await instance.get(END_POINT.GET_HOTEL_DETAIL(1));
-    return response.data.data;
+    const response = await instance.get(END_POINT.GET_HOTEL_DETAIL(hotelId));
+    //console.log(response);
+    return response.data;
   } catch (error) {
     console.error(error);
   }
 };
 
-export const useFetchHotelDetail = () => {
+export const useFetchHotelDetail = (hotelId: number) => {
   return useQuery({
-    queryKey: [],
-    queryFn: getHotelDetail,
+    queryKey: ["hotelDetail", hotelId],
+    queryFn: () => getHotelDetail(hotelId),
   });
 };

@@ -34,9 +34,13 @@ const Carousel = ({ images }: CarouselProps) => {
   return (
     <div css={carouselContainer} onWheel={handleWheel}>
       <Slider ref={sliderRef} {...settings}>
-        {images.map((image, index) => (
+        {images.map((hotelImageUrl, index) => (
           <div key={index}>
-            <img src={image} alt={`Slide ${index}`} css={styles.image} />
+            <img
+              src={hotelImageUrl}
+              alt={`Slide ${index}`}
+              css={styles.image}
+            />
           </div>
         ))}
       </Slider>
