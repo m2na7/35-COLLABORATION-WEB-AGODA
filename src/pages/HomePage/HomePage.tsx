@@ -7,8 +7,8 @@ import { useFetchPopularCities } from "@/apis/home/popularCity";
 import { BestCountry, PopularCity } from "@app-types/homeList";
 
 const HomePage = () => {
-  const { data: bestCountries, isLoading: bestCountriesLoading, error: bestCountriesError } = useFetchBestCountries();
-  const { data: popularCities, isLoading: popularCitiesLoading, error: popularCitiesError } = useFetchPopularCities();
+  const { data: bestCountries, isLoading: bestCountriesLoading} = useFetchBestCountries();
+  const { data: popularCities, isLoading: popularCitiesLoading} = useFetchPopularCities();
 
   const formattedBestCountries = bestCountries?.bestCountries?.map((item: BestCountry) => ({
     id: item.countryId,
@@ -17,19 +17,15 @@ const HomePage = () => {
     count: item.hotelCount,
   })) ?? [];
 
-  const formattedPopularCities = popularCities?.map((item: PopularCity) => ({
+  const formattedPopularCities = popularCities?.popularCities?.map((item: PopularCity) => ({
     id: item.cityId,
     imageUrl: item.cityImage,
     title: item.cityName,
     count: item.hotelCount,
-  }));
+  })) ?? [];
 
   if (bestCountriesLoading || popularCitiesLoading) {
     return <span>로딩 중</span>;
-  }
-
-  if (bestCountriesError || popularCitiesError) {
-    return <span>데이터를 가져오는 데 실패했습니다.</span>;
   }
 
   return (

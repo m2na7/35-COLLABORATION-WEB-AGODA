@@ -1,4 +1,4 @@
-export interface BestDestination {
+export interface BestCountry {
   countryId: number;
   countryName: string;
   hotelCount: number;
@@ -9,4 +9,10 @@ export interface PopularCity {
   cityName: string;
   hotelCount: number;
   cityImage: string;
+}
+export interface BestCountryResponse {
+  bestCountries: BestCountry[];
+}
+export interface PopularCityResponse {
+  popularCities: PopularCity[];
 }
