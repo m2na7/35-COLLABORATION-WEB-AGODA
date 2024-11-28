@@ -6,20 +6,29 @@ import Detail from "@pages/HotelDetailPage/components/HotelDetail/Detail";
 import TextReview from "@pages/HotelDetailPage/components/HotelDetail/TextReview";
 import Header from "@components/Header/Header";
 import HeaderSelection from "@pages/HotelDetailPage/components/HotelDetail/HeaderSelection";
+import RoomDetail from "@pages/HotelDetailPage/components/RoomDetail/RoomDetail";
+import {
+  HotelDetailContainer,
+  HotelDetailLayout,
+} from "@pages/HotelDetailPage/HotelDetailPage.style";
 //import { HotelDetail } from "@app-types/hotelDetail";
 
 const HotelDetailPage = () => {
   return (
-    <>
-      <Header hasBackButton={true} />
-      <HeaderSelection />
-      <HotelCarousel />
-      <Detail />
-      <Highlights />
-      <RateReview />
-      <TextReview />
-      <Location />
-    </>
+    <div css={HotelDetailLayout}>
+      <div css={HotelDetailContainer}>
+        <Header hasBackButton={true} />
+        <HeaderSelection />
+        <HotelCarousel />
+        <Detail />
+        <Highlights />
+        <RateReview />
+        <TextReview />
+        <Location />
+      </div>
+
+      <RoomDetail />
+    </div>
   );
 };
 

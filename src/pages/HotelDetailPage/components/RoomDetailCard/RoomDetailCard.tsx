@@ -53,7 +53,7 @@ const RoomDetailCard = ({ roomData }: RoomDetailCardProps) => {
       <section css={roomDetailCardLayout}>
         <div css={roomDetailCarouselStyle}>
           <div css={roomDetailCarouselLabelStyle}>커플/2인 여행객이 선호</div>
-          <Carousel images={hotelRoomImages} />
+          <Carousel images={hotelRoomImages} variant="round" />
         </div>
         <div css={roomDetailCardContainer}>
           <span css={roomTitleStyle}>{roomName}</span>
