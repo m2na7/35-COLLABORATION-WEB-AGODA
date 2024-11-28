@@ -2,20 +2,20 @@ import Header from "@components/Header/Header";
 import HomeHeader from "./components/HomeHeader/HomeHeader";
 import ListWithButton from "./components/ListWithButton/ListWithButton";
 import Spacing from "./components/Spacing";
-import { useFetchBestLocations } from '@/apis/home/bestLocations';
+import { useFetchBestCountries } from '@/apis/home/bestCountries';
 import { useFetchPopularCities } from "@/apis/home/popularCity";
-import { BestDestination, PopularCity } from "@app-types/homeList";
+import { BestCountry, PopularCity } from "@app-types/homeList";
 
 const HomePage = () => {
-  const { data: bestDestinations, isLoading: bestDestinationsLoading, error: bestDestinationsError } = useFetchBestLocations();
+  const { data: bestCountries, isLoading: bestCountriesLoading, error: bestCountriesError } = useFetchBestCountries();
   const { data: popularCities, isLoading: popularCitiesLoading, error: popularCitiesError } = useFetchPopularCities();
 
-  const formattedBestDestinations = bestDestinations?.map((item: BestDestination) => ({
+  const formattedBestCountries = bestCountries?.bestCountries?.map((item: BestCountry) => ({
     id: item.countryId,
     imageUrl: item.countryImage,
     title: item.countryName,
     count: item.hotelCount,
-  }));
+  })) ?? [];
 
   const formattedPopularCities = popularCities?.map((item: PopularCity) => ({
     id: item.cityId,
@@ -24,19 +24,19 @@ const HomePage = () => {
     count: item.hotelCount,
   }));
 
-  if (bestDestinationsLoading || popularCitiesLoading) {
-    return <div>로딩 중</div>;
+  if (bestCountriesLoading || popularCitiesLoading) {
+    return <span>로딩 중</span>;
   }
 
-  if (bestDestinationsError || popularCitiesError) {
-    return <div>데이터를 가져오는 데 실패했습니다.</div>;
+  if (bestCountriesError || popularCitiesError) {
+    return <span>데이터를 가져오는 데 실패했습니다.</span>;
   }
 
   return (
     <>
       <Header />
       <HomeHeader />
-      <ListWithButton title="베스트 여행지" items={formattedBestDestinations} />
+      <ListWithButton title="베스트 여행지" items={formattedBestCountries} />
       <ListWithButton title="인기 도시" items={formattedPopularCities} />
       <Spacing width={0} height={10} />
     </>
