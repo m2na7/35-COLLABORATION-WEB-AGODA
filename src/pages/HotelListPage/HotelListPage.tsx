@@ -14,7 +14,6 @@ import {
   hotelListWrapper,
 } from './HotelListPage.style';
 import { useFetchHotelList } from '@apis/hotel/useFetchHotelList';
-import { HotelList } from '@app-types/hotelList';
 
 const HotelListPage = () => {
   const [showTimeSale, setShowTimeSale] = useState(false);
@@ -24,8 +23,6 @@ const HotelListPage = () => {
   const toggleTimeSale = () => {
     setShowTimeSale((prev) => !prev);
   };
-
-  const filteredHotels = data?.hotels.filter((hotel) => !hotel.isTimeSale);
 
   return (
     <>
@@ -41,9 +38,9 @@ const HotelListPage = () => {
 
       <div css={hotelListWrapper}>
         <SaleBox />
-        {showTimeSale && <TimeSaleSection data={data?.hotels ?? []} />}
+        {showTimeSale && data && <TimeSaleSection data={data.timeSaleHotels} />}
         <section css={cardWrapper}>
-          {filteredHotels?.map((hotel: HotelList) => (
+          {data?.nonTimeSaleHotels.map((hotel) => (
             <HotelListCard key={hotel.hotelId} hotel={hotel} />
           ))}
         </section>

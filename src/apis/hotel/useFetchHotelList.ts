@@ -28,5 +28,13 @@ export const useFetchHotelList = (
   return useQuery({
     queryKey: [queryKey.HOTELS_LIST, cityId],
     queryFn: () => getHotelsList(cityId, saleType),
+    select: (data) => {
+      const timeSaleHotels = data.hotels.filter((hotel) => hotel.isTimeSale);
+      const nonTimeSaleHotels = data.hotels.filter(
+        (hotel) => !hotel.isTimeSale
+      );
+      return { timeSaleHotels, nonTimeSaleHotels };
+    },
+    staleTime: 5 * 60 * 1000,
   });
 };
