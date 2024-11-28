@@ -10,6 +10,8 @@ const hotelListHeaderWrapper = css`
 const searchBar = css`
   display: flex;
   align-items: center;
+  width: 69%;
+  justify-content: space-between;
   padding: 0.4rem 1.5rem;
   border-radius: 24px;
   background-color: ${theme.color.gray200};
@@ -31,8 +33,8 @@ const dot = css`
 `;
 
 const searchIcon = css`
-  margin-left: 2rem;
-  color: ${theme.color.gray700};
+  margin-right: 0.1rem;
+
 `;
 
 const location = css`
