@@ -7,8 +7,7 @@
 </div>
 
 ## 🌊 agoda
-아고다입니다.
-
+agoda의 주요 기능을 모바일 웹 화면에 최적화된 UI/UX로 구현하여 사용자 경험을 개선합니다.
 ## 🌊 WEB Developer
 
 | <center> 박채연 </center>| <center>강민하 </center>| <center>이윤지</center>| <center>한수정</center>|
@@ -74,7 +73,7 @@
 ```plaintext
 |-- 📁 node_modules
 |-- 📁 public
-		|-- 📁 svg
+    |-- 📁 svg
 |-- 📁 src
     |-- 📁 asset
 	      |-- 📁 svgs
