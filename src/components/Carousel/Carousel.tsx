@@ -2,14 +2,14 @@ import { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import * as styles from "./Carousel.styles";
-import { carouselContainer } from "./Carousel.styles";
+import { carouselContainer, carouselImageStyle } from "./Carousel.styles";
 
 interface CarouselProps {
   images: string[];
+  variant: "round" | "square";
 }
 
-const Carousel = ({ images }: CarouselProps) => {
+const Carousel = ({ images, variant }: CarouselProps) => {
   const sliderRef = useRef<Slider>(null);
 
   const settings = {
@@ -36,7 +36,11 @@ const Carousel = ({ images }: CarouselProps) => {
       <Slider ref={sliderRef} {...settings}>
         {images.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={`Slide ${index}`} css={styles.image} />
+            <img
+              src={image}
+              alt={`Slide ${index}`}
+              css={carouselImageStyle(variant)}
+            />
           </div>
         ))}
       </Slider>
