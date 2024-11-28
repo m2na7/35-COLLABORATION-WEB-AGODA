@@ -13,7 +13,7 @@ import {
 const cityNames: Record<number, string> = {
   1: '서울',
   2: '제주',
-  3: '부산',
+  6: '부산',
 };
 
 const SearchBar = ({ cityId }: { cityId: number }) => {

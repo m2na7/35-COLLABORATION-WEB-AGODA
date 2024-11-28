@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
+
 import Header from '@components/Header/Header';
 import SaleBox from './components/SaleBox';
 import SearchBar from './components/SearchBar';
@@ -13,16 +15,17 @@ import {
 } from './HotelListPage.style';
 import { useFetchHotelList } from '@apis/hotel/useFetchHotelList';
 import { HotelList } from '@app-types/hotelList';
-import { useParams } from 'react-router-dom';
 
 const HotelListPage = () => {
   const [showTimeSale, setShowTimeSale] = useState(false);
   const { cityId } = useParams();
-  const { data } = useFetchHotelList(Number(cityId), 'default');
+  const { data } = useFetchHotelList(Number(cityId), 'timeLimit');
 
   const toggleTimeSale = () => {
     setShowTimeSale((prev) => !prev);
   };
+
+  const filteredHotels = data?.hotels.filter((hotel) => !hotel.isTimeSale);
 
   return (
     <>
@@ -38,11 +41,9 @@ const HotelListPage = () => {
 
       <div css={hotelListWrapper}>
         <SaleBox />
-
-        {showTimeSale && <TimeSaleSection />}
-
+        {showTimeSale && <TimeSaleSection data={data?.hotels ?? []} />}
         <section css={cardWrapper}>
-          {data?.hotels?.map((hotel: HotelList) => (
+          {filteredHotels?.map((hotel: HotelList) => (
             <HotelListCard key={hotel.hotelId} hotel={hotel} />
           ))}
         </section>
