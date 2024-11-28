@@ -1,15 +1,19 @@
 import Carousel from "./Carousel";
-import { fakeHotelData } from "../../utils/mocks/fakeHotelData";
+import { hotelImages } from "@app-types/hotelDetail";
 
-const HotelCarousel = () => {
-  const { hotelImages } = fakeHotelData;
+interface HotelCarouselProps {
+  images: hotelImages[];
+}
+
+const HotelCarousel = ({ images }: HotelCarouselProps) => {
+  
+  console.log(images);
+
+  const imageUrls = images ? images.map((image) => image.hotelImageUrl) : [];
 
   return (
     <div>
-      <Carousel
-        images={hotelImages.map((image) => image.hotelImageUrl)}
-        variant="square"
-      />
+      <Carousel images={imageUrls} variant="square" />
     </div>
   );
 };

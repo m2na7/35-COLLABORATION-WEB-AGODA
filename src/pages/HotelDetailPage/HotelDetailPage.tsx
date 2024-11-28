@@ -1,32 +1,47 @@
+import { useParams } from "react-router-dom";
+
+import Header from "@components/Header/Header";
 import Highlights from "@pages/HotelDetailPage/components/HotelDetail/Highlights";
 import RateReview from "@pages/HotelDetailPage/components/HotelDetail/RateReview";
 import Location from "@pages/HotelDetailPage/components/HotelDetail/Location";
 import HotelCarousel from "@components/Carousel/HotelCarousel";
 import Detail from "@pages/HotelDetailPage/components/HotelDetail/Detail";
 import TextReview from "@pages/HotelDetailPage/components/HotelDetail/TextReview";
-import Header from "@components/Header/Header";
 import HeaderSelection from "@pages/HotelDetailPage/components/HotelDetail/HeaderSelection";
 import RoomDetail from "@pages/HotelDetailPage/components/RoomDetail/RoomDetail";
 import {
   HotelDetailContainer,
   HotelDetailLayout,
 } from "@pages/HotelDetailPage/HotelDetailPage.style";
-//import { HotelDetail } from "@app-types/hotelDetail";
+import { useFetchHotelDetail } from "@apis/hoteldetail/useFetchHotelDetail";
 
 const HotelDetailPage = () => {
+  const { hotelId } = useParams();
+  const { data: hotelDetail, isLoading: hotelDetailLoading } =
+    useFetchHotelDetail(Number(hotelId));
+
+  // 로딩 중 처리
+  if (hotelDetailLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!hotelDetail || !hotelDetail.hotelImages) {
+    return <div>No images available</div>;
+  }
+
   return (
     <div css={HotelDetailLayout}>
       <div css={HotelDetailContainer}>
         <Header hasBackButton={true} />
         <HeaderSelection />
-        <HotelCarousel />
+        <HotelCarousel images={hotelDetail.hotelImages} />
         <Detail />
         <Highlights />
         <RateReview />
         <TextReview />
         <Location />
-      </div>
 
+      </div>
       <RoomDetail />
     </div>
   );
