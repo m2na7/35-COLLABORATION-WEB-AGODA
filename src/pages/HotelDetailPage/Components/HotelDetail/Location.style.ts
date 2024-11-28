@@ -97,6 +97,5 @@ export const MapButton = (theme: Theme) => css`
   color: ${theme.color.blue300};
   ${theme.font.detail2_b_12};
   border-radius: 10rem;
-  z-index: 1; 
-  }
+  z-index: 1;
 `;
