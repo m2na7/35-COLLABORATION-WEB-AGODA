@@ -11,9 +11,15 @@ import {
   HotelDetailContainer,
   HotelDetailLayout,
 } from "@pages/HotelDetailPage/HotelDetailPage.style";
-//import { HotelDetail } from "@app-types/hotelDetail";
+
+import { useFetchRoomDetail } from "@apis/hoteldetail/useFetchRoomDetail";
+import { useParams } from "react-router-dom";
+
 
 const HotelDetailPage = () => {
+  const { hotelId } = useParams();
+  const { data: roomData } = useFetchRoomDetail(Number(hotelId));
+  const rooms = roomData?.rooms || [];
   return (
     <div css={HotelDetailLayout}>
       <div css={HotelDetailContainer}>
@@ -27,7 +33,7 @@ const HotelDetailPage = () => {
         <Location />
       </div>
 
-      <RoomDetail />
+      <RoomDetail roomData={rooms} />
     </div>
   );
 };
