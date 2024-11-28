@@ -1,4 +1,4 @@
-export { default as Bestseller } from "./Bestseller";
+export { default as Bestseller } from "./bestseller";
 export { default as Ellipse27 } from "./Ellipse27";
 export { default as Ellipse28 } from "./Ellipse28";
 export { default as Emptyheart } from "./Emptyheart";

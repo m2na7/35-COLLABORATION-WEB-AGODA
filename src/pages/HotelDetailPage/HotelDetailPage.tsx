@@ -14,6 +14,9 @@ import IsLiked from "./components/HotelDetail/Like/IsLiked";
 import {
   HotelDetailContainer,
   HotelDetailLayout,
+  CarouselWrapper,
+  IsLikedWrapper,
+
 } from "@pages/HotelDetailPage/HotelDetailPage.style";
 import { useFetchHotelDetail } from "@apis/hoteldetail/useFetchHotelDetail";
 
@@ -36,8 +39,15 @@ const HotelDetailPage = () => {
       <div css={HotelDetailContainer}>
         <Header hasBackButton={true} />
         <HeaderSelection />
-        <HotelCarousel images={hotelDetail.hotelImages} />
-        <IsLiked hotelId={hotelDetail.hotelId} isLiked={hotelDetail.isLiked} />
+        <div css={CarouselWrapper}>
+          <HotelCarousel images={hotelDetail.hotelImages} />
+          <div css={IsLikedWrapper}>
+            <IsLiked
+              hotelId={hotelDetail.hotelId}
+              isLiked={hotelDetail.isLiked}
+            />
+          </div>
+        </div>
         <Detail
           hotelName={hotelDetail.hotelName}
           reservationCount={hotelDetail.reservationCount}
