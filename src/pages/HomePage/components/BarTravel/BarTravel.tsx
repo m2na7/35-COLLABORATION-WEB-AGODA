@@ -31,13 +31,6 @@ const BarTravel = () => {
 
   const queryParams = new URLSearchParams(location.search);
   const city = queryParams.get("city");
-  // const [city, setCity] = useState<string | null>(null);
-
-  // useEffect(() => {
-  //   if (cityFromURL) {
-  //     setCity(cityFromURL);
-  //   }
-  // }, [location]);
 
   const handleSearchClick = () => {
     if (city) {

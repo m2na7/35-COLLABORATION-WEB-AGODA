@@ -13,12 +13,10 @@ import {
   hotelListWrapper,
 } from "./HotelListPage.style";
 
-
 const HotelListPage = () => {
   const queryParams = new URLSearchParams(location.search);
-  const cityFromURL = queryParams.get("city");
+  const city = queryParams.get("city") || "";
   const [showTimeSale, setShowTimeSale] = useState(false);
-  const [city] = useState(cityFromURL || "");
 
   const toggleTimeSale = () => {
     setShowTimeSale((prev) => !prev);
