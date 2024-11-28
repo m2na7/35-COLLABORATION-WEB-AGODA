@@ -25,9 +25,9 @@ const buttonWrapper = css`
 `;
 
 const retryButton = (theme: Theme) => css`
-  width: 12rem;
+  width: 13rem;
   margin-bottom: 7rem;
-  padding: 1.2rem 2.4rem;
+  padding: 1rem 2.4rem;
   color: #fff;
   background-color: ${theme.color.blue300};
   border: none;

@@ -17,7 +17,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
       <div css={errorTitle}>{error?.message}</div>
       <div css={buttonWrapper}>
         <button css={retryButton} type={'button'} onClick={resetErrorBoundary}>
-          새로고침
+          다시 시도하기
         </button>
         <button css={retryButton} type='button' onClick={handleNavigateHome}>
           홈으로 이동
