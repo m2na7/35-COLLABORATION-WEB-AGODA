@@ -6,7 +6,10 @@ const HotelCarousel = () => {
 
   return (
     <div>
-      <Carousel images={hotelImages.map((image) => image.hotelImageUrl)} />
+      <Carousel
+        images={hotelImages.map((image) => image.hotelImageUrl)}
+        variant="square"
+      />
     </div>
   );
 };
