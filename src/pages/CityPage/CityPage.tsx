@@ -1,4 +1,5 @@
-import { useFetchCities } from "@/apis/useFetchCities";
+import { useFetchCities } from "@apis/city/useFetchCities";
+import { CitiesType } from "@app-types/city";
 import {
   CityCardWrapper,
   CityPageLayout,
@@ -6,17 +7,11 @@ import {
 import CityCard from "@pages/CityPage/components/CityCard/CityCard";
 import CityHeader from "@pages/CityPage/components/CityHeader/CityHeader";
 
-export type CitiesType = {
-  cityId: number;
-  cityName: string;
-  countryName: string;
-};
-
 const CityPage = () => {
-  const { data } = useFetchCities();
+  const { data, isLoading } = useFetchCities();
 
-  if (!data) {
-    return <div>도시 데이터가 없습니다.</div>;
+  if (!data || isLoading) {
+    return <div>로딩중</div>;
   }
 
   return (
