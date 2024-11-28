@@ -38,6 +38,7 @@ const HotelDetailPage = () => {
         <Detail
           hotelName={hotelDetail.hotelName}
           reservationCount={hotelDetail.reservationCount}
+          star={hotelDetail.star}
         />
         <Highlights />
         <RateReview />

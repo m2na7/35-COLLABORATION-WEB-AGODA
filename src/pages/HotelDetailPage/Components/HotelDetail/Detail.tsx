@@ -14,9 +14,10 @@ import {
 interface DetailProps {
   hotelName: string;
   reservationCount: number;
+  star: number;
 }
 
-const Detail = ({ hotelName, reservationCount }: DetailProps) => {
+const Detail = ({ hotelName, reservationCount, star }: DetailProps) => {
   return (
     <div css={detailWrapper}>
       <span css={bestseller}>베스트셀러</span>
@@ -25,7 +26,7 @@ const Detail = ({ hotelName, reservationCount }: DetailProps) => {
         <div css={subtitle}>
           <span>호텔</span>
           <span css={starRating}>
-            <StarRating rating={3} />
+            <StarRating rating={star}/>
           </span>
         </div>
         <div css={thumbsUpWrapper}>
