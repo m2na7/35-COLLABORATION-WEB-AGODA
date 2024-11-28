@@ -35,12 +35,14 @@ const HotelDetailPage = () => {
         <Header hasBackButton={true} />
         <HeaderSelection />
         <HotelCarousel images={hotelDetail.hotelImages} />
-        <Detail />
+        <Detail
+          hotelName={hotelDetail.hotelName}
+          reservationCount={hotelDetail.reservationCount}
+        />
         <Highlights />
         <RateReview />
         <TextReview />
         <Location />
-
       </div>
       <RoomDetail />
     </div>
