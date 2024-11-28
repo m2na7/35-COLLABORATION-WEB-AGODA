@@ -33,8 +33,12 @@ const BarTravel = () => {
   const city = queryParams.get("city");
 
   const handleSearchClick = () => {
-    if (city) {
-      navigate(`${routePath.HOTEL_LIST}?city=${city}`);
+    if (city === "서울") {
+      navigate(`${routePath.HOTEL_LIST}/1`);
+    } else if (city === "제주") {
+      navigate(`${routePath.HOTEL_LIST}/2`);
+    } else if (city === "부산") {
+      navigate(`${routePath.HOTEL_LIST}/6`);
     }
   };
 
