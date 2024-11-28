@@ -15,6 +15,7 @@ import {
 } from './HotelListPage.style';
 import { useFetchHotelList } from '@apis/hotel/useFetchHotelList';
 
+
 const HotelListPage = () => {
   const [showTimeSale, setShowTimeSale] = useState(false);
   const { cityId } = useParams();
