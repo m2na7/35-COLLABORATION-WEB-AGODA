@@ -1,16 +1,17 @@
-import { useQuery } from '@tanstack/react-query';
+import { useSuspenseQuery } from "@tanstack/react-query";
 
-import { instance } from '@apis/instance';
-import { END_POINT } from '@utils/constants/api/api';
-import { queryKey } from '@utils/constants/api/queryKey';
-import { HotelListResponse } from '@app-types/hotelList';
-import { ApiResponse } from '@app-types/apiResponseType';
+import { instance } from "@apis/instance";
+import { END_POINT } from "@utils/constants/api/api";
+import { queryKey } from "@utils/constants/api/queryKey";
+import { HotelListResponse } from "@app-types/hotelList";
+import { ApiResponse } from "@app-types/apiResponseType";
 
 const getHotelsList = async (
   cityId: number,
-  saleType: 'default' | 'timeLimit'
+  saleType: "default" | "timeLimit"
 ): Promise<HotelListResponse> => {
   try {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     const response = await instance.get<ApiResponse<HotelListResponse>>(
       END_POINT.GET_HOTELS_LIST(cityId, saleType)
     );
@@ -23,9 +24,9 @@ const getHotelsList = async (
 
 export const useFetchHotelList = (
   cityId: number,
-  saleType: 'default' | 'timeLimit'
+  saleType: "default" | "timeLimit"
 ) => {
-  return useQuery({
+  return useSuspenseQuery({
     queryKey: [queryKey.HOTELS_LIST, cityId],
     queryFn: () => getHotelsList(cityId, saleType),
     select: (data) => {
