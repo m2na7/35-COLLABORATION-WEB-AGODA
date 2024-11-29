@@ -7,8 +7,8 @@ import { useFetchPopularCities } from "@apis/home/useFetchPopularCities";
 import { BestCountry, PopularCity } from "@app-types/homeList";
 
 const HomePage = () => {
-  const { data: bestCountries, isLoading: bestCountriesLoading} = useFetchBestCountries();
-  const { data: popularCities, isLoading: popularCitiesLoading} = useFetchPopularCities();
+  const { data: bestCountries } = useFetchBestCountries();
+  const { data: popularCities } = useFetchPopularCities();
 
   const formattedBestCountries = bestCountries?.bestCountries?.map((item: BestCountry) => ({
     id: item.countryId,
@@ -24,9 +24,6 @@ const HomePage = () => {
     count: item.hotelCount,
   })) ?? [];
 
-  if (bestCountriesLoading || popularCitiesLoading) {
-    return <span>로딩 중</span>;
-  }
 
   return (
     <>
