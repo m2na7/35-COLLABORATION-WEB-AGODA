@@ -16,22 +16,17 @@ import {
   HotelDetailLayout,
   CarouselWrapper,
   IsLikedWrapper,
-
 } from "@pages/HotelDetailPage/HotelDetailPage.style";
 
 import { useFetchHotelDetail } from "@apis/hoteldetail/useFetchHotelDetail";
-  
-  
 import { useFetchRoomDetail } from "@apis/hoteldetail/useFetchRoomDetail";
-import { useParams } from "react-router-dom";
 import RoomDescription from "@pages/HotelDetailPage/components/RoomDescription/RoomDescription";
 
 const HotelDetailPage = () => {
   const { hotelId } = useParams();
   const { data: roomData } = useFetchRoomDetail(Number(hotelId));
-  
-    const { data: hotelDetail } =
-    useFetchHotelDetail(Number(hotelId));
+
+  const { data: hotelDetail } = useFetchHotelDetail(Number(hotelId));
 
   if (!hotelDetail || !hotelDetail.hotelImages) {
     return <div>No images available</div>;
@@ -44,7 +39,6 @@ const HotelDetailPage = () => {
       behavior: "smooth",
     });
   };
-
 
   return (
     <div css={HotelDetailLayout}>
@@ -72,7 +66,9 @@ const HotelDetailPage = () => {
       </div>
 
       <RoomDetail roomData={rooms} />
-      <RoomDescription handleScrollToTopButtonClick={handleScrollToTopButtonClick}/>
+      <RoomDescription
+        handleScrollToTopButtonClick={handleScrollToTopButtonClick}
+      />
     </div>
   );
 };
