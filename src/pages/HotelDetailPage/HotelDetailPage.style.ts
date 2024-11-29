@@ -6,7 +6,6 @@ export const HotelDetailLayout = (theme: Theme) => css`
 
   display: flex;
   flex-direction: column;
-  gap: 7.4rem;
 `;
 
 export const HotelDetailContainer = (theme: Theme) => css`
@@ -14,4 +13,6 @@ export const HotelDetailContainer = (theme: Theme) => css`
 
   border-radius: 0px 0px 10px 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  margin-bottom: 7rem;
 `;

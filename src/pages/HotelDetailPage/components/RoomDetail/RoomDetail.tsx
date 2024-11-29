@@ -11,7 +11,7 @@ import {
 import RoomDetailCard from "@pages/HotelDetailPage/components/RoomDetailCard/RoomDetailCard";
 import RoomDetailChip from "@pages/HotelDetailPage/components/RoomDetailChip/RoomDetailChip";
 import RoomDetailPriceCard from "@pages/HotelDetailPage/components/RoomDetailPriceCard/RoomDetailPriceCard";
-import { ROOM_DETAIL_CHIP_DATA } from "@utils/constants/roomDetailChipData";
+import { ROOM_DETAIL_CHIP_DATA } from "@utils/constants/hotelDetail/roomDetailChipData";
 import { RoomDataType } from "@app-types/hotelDetail";
 
 interface RoomDetailProps {
