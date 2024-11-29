@@ -3,9 +3,9 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { END_POINT } from "@utils/constants/api/api";
 import { instance } from "@apis/instance";
 
-import { HeartWrapper, EmptyHeart, FillHeart } from "./IsLiked.style";
 import { Emptyheart, Fillheart } from "@assets/svg";
 import { queryKey } from "@utils/constants/api/queryKey";
+import { EmptyHeart, FillHeart, HeartWrapper } from "@pages/HotelDetailPage/components/HotelDetail/Like/IsLiked.style";
 
 interface IsLikeProps {
   hotelId: number;

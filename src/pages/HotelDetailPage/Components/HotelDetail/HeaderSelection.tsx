@@ -1,9 +1,9 @@
 import { IcCalendar, IcPeople, IcKrw, IcRoom } from "@assets/svg";
 import {
-  headerSelectionWrapper,
   dateSelection,
+  headerSelectionWrapper,
   iconWrapper,
-} from "./HeaderSelection.style";
+} from "@pages/HotelDetailPage/components/HotelDetail/HeaderSelection.style";
 
 const HeaderSelection = () => {
   return (

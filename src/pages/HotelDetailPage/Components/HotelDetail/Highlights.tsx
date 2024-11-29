@@ -1,14 +1,14 @@
+import IcCheck from "@assets/svg/IcCheck";
 import {
-  HighlightsWrapper,
-  HighlightsHeader,
-  TitleStyle,
+  BottomStyle,
   HighlightsContainer,
+  HighlightsHeader,
+  HighlightsWrapper,
   LeftListStyle,
   RightListStyle,
   ServiceStyle,
-  BottomStyle,
-} from "./Highlights.style";
-import IcCheck from "@assets/svg/IcCheck";
+  TitleStyle,
+} from "@pages/HotelDetailPage/components/HotelDetail/Highlights.style";
 
 const Highlights = () => {
   const leftItems = [

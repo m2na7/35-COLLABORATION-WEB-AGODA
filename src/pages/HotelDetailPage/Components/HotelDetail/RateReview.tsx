@@ -1,21 +1,21 @@
-import {
-  RateReviewWrapper,
-  RateHeader,
-  TitleStyle,
-  DetailLink,
-  CircleEvaluationContainer,
-  CircleContainer,
-  EvaluationList,
-  EvaluationItem,
-  ProgressBarWrapper,
-  ProgressBarForeground,
-  RectangleBackground,
-  CircleWrapper,
-  RateText,
-  BottomStyle,
-} from "./RateReview.style";
 import { useTheme } from "@emotion/react";
 import { Ellipse27, Ellipse28 } from "@assets/svg";
+import {
+  BottomStyle,
+  CircleContainer,
+  CircleEvaluationContainer,
+  CircleWrapper,
+  DetailLink,
+  EvaluationItem,
+  EvaluationList,
+  ProgressBarForeground,
+  ProgressBarWrapper,
+  RateHeader,
+  RateReviewWrapper,
+  RateText,
+  RectangleBackground,
+  TitleStyle,
+} from "@pages/HotelDetailPage/components/HotelDetail/RateReview.style";
 
 const RateReview = () => {
   const theme = useTheme();

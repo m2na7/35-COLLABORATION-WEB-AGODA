@@ -1,15 +1,8 @@
 import StarRating from "@components/StarRating/StarRating";
 import { IcGood } from "@assets/svg";
+import { bestseller, detailWrapper, starRating, subtitle, subtitleRow, thumbsUpWrapper, title } from "@pages/HotelDetailPage/components/HotelDetail/Detail.style";
 
-import {
-  detailWrapper,
-  bestseller,
-  title,
-  subtitleRow,
-  subtitle,
-  starRating,
-  thumbsUpWrapper,
-} from "./Detail.style";
+
 
 interface DetailProps {
   hotelName: string;

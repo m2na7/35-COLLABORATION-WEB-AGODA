@@ -1,16 +1,16 @@
+import StarRating from "@components/StarRating/StarRating";
 import {
-  reviewsWrapper,
-  reviewsHeader,
-  titleStyle,
+  BottomStyle,
   detailLink,
-  reviewList,
-  reviewItem,
-  reviewTitle,
   ratingWrapper,
   reviewContent,
-  BottomStyle,
-} from "./TextReview.style";
-import StarRating from "@components/StarRating/StarRating";
+  reviewItem,
+  reviewList,
+  reviewsHeader,
+  reviewsWrapper,
+  reviewTitle,
+  titleStyle,
+} from "@pages/HotelDetailPage/components/HotelDetail/TextReview.style";
 
 const TextReview = () => {
   const reviews = [
