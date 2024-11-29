@@ -10,11 +10,9 @@ const getBestCountries = async (): Promise<BestCountryResponse> => {
     const response = await instance.get<ApiResponse<BestCountryResponse>>(
       END_POINT.GET_BEST_LOCATIONS
     );
-    console.log(response.data.data);
     return response.data.data;
   } catch (error) {
-    console.error(error);
-    throw new Error('베스트 여행지 데이터를 가져오는데 실패했습니다.');
+    throw error;
   }
 };
 

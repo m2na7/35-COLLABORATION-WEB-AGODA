@@ -12,8 +12,7 @@ const getPopularCities = async (): Promise<PopularCityResponse> => {
     );
     return response.data.data;
   } catch (error) {
-    console.error(error);
-    throw new Error('인기 도시 데이터를 가져오는데 실패했습니다.');
+    throw error;
   }
 };
 

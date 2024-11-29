@@ -2,8 +2,8 @@ import Header from "@components/Header/Header";
 import HomeHeader from "./components/HomeHeader/HomeHeader";
 import ListWithButton from "./components/ListWithButton/ListWithButton";
 import Spacing from "./components/Spacing";
-import { useFetchBestCountries } from '@/apis/home/bestCountries';
-import { useFetchPopularCities } from "@/apis/home/popularCity";
+import { useFetchBestCountries } from '@apis/home/useFetchBestCountries';
+import { useFetchPopularCities } from "@apis/home/useFetchPopularCities";
 import { BestCountry, PopularCity } from "@app-types/homeList";
 
 const HomePage = () => {
