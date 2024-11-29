@@ -11,16 +11,14 @@ import {
   HotelDetailContainer,
   HotelDetailLayout,
 } from "@pages/HotelDetailPage/HotelDetailPage.style";
-
 import { useFetchRoomDetail } from "@apis/hoteldetail/useFetchRoomDetail";
 import { useParams } from "react-router-dom";
-
 import RoomDescription from "@pages/HotelDetailPage/components/RoomDescription/RoomDescription";
-//import { HotelDetail } from "@app-types/hotelDetail";
 
 const HotelDetailPage = () => {
   const { hotelId } = useParams();
   const { data: roomData } = useFetchRoomDetail(Number(hotelId));
+
   const rooms = roomData?.rooms || [];
   const handleScrollToTopButtonClick = () => {
     window.scrollTo({
