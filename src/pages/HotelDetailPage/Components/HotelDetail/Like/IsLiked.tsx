@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { END_POINT } from "@utils/constants/api/api";
 import { instance } from "@apis/instance";
 
 import { HeartWrapper, EmptyHeart, FillHeart } from "./IsLiked.style";
 import { Emptyheart, Fillheart } from "@assets/svg";
+import { queryKey } from "@utils/constants/api/queryKey";
 
 interface IsLikeProps {
   hotelId: number;
@@ -13,6 +14,8 @@ interface IsLikeProps {
 
 const IsLiked = ({ hotelId, isLiked }: IsLikeProps) => {
   const [currentIsLiked, setCurrentIsLiked] = useState(isLiked);
+
+  const queryClient = useQueryClient();
 
   // 좋아요 상태 변경 API 호출
   const toggleLikeMutation = useMutation({
@@ -24,6 +27,9 @@ const IsLiked = ({ hotelId, isLiked }: IsLikeProps) => {
     },
     onSuccess: () => {
       setCurrentIsLiked((prev) => !prev);
+      queryClient.invalidateQueries({
+        queryKey: [queryKey.HOTEL_DETAILS],
+      });
     },
     onError: (error) => {
       console.error("좋아요 변경 실패:", error);

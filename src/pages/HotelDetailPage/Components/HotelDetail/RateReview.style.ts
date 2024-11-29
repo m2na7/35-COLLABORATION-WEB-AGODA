@@ -4,6 +4,7 @@ export const RateReviewWrapper = css`
   display: flex;
   flex-direction: column;
   background-color: #fff;
+  margin-top: 1rem;
 `;
 
 export const RateHeader = css`

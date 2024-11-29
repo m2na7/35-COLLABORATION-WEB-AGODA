@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query'; 
+import { useSuspenseQuery } from '@tanstack/react-query'; 
 import { instance } from '@/apis/instance'; 
 import { END_POINT } from '@utils/constants/api/api'; 
 import { ApiResponse } from '@app-types/apiResponseType';
@@ -17,7 +17,7 @@ const getPopularCities = async (): Promise<PopularCityResponse> => {
 };
 
 export const useFetchPopularCities = () => {
-  return useQuery({
+  return useSuspenseQuery({
     queryKey: [queryKey.POPULAR_CITIES], 
     queryFn: getPopularCities,
   });

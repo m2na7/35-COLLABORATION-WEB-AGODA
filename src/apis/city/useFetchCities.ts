@@ -1,7 +1,7 @@
 import { instance } from "@/apis/instance";
 import { ApiResponse } from "@app-types/apiResponseType";
 import { CitiesResponse } from "@app-types/city";
-import { useQuery } from "@tanstack/react-query";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { END_POINT } from "@utils/constants/api/api";
 import { queryKey } from "@utils/constants/api/queryKey";
 
@@ -17,7 +17,7 @@ const getCities = async (): Promise<CitiesResponse> => {
 };
 
 export const useFetchCities = () => {
-  return useQuery({
+  return useSuspenseQuery({
     queryKey: [queryKey.CITIES],
     queryFn: getCities,
   });

@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { instance } from "@apis/instance";
 import { END_POINT } from "@utils/constants/api/api";
 
@@ -7,12 +7,12 @@ const getHotelDetail = async (hotelId: number) => {
     const response = await instance.get(END_POINT.GET_HOTEL_DETAIL(hotelId));
     return response.data.data;
   } catch (error) {
-    console.error(error);
+    throw error
   }
 };
 
 export const useFetchHotelDetail = (hotelId: number) => {
-  return useQuery({
+  return useSuspenseQuery({
     queryKey: ["hotelDetail", hotelId],
     queryFn: () => getHotelDetail(hotelId),
   });

@@ -19,7 +19,6 @@ const RoomDescriptionCard = ({ title, children }: RoomDescriptionCardProps) => {
 
   const handleButtonClick = () => {
     setIsSpread(!isSpread);
-    console.log(isSpread);
   };
 
   return (

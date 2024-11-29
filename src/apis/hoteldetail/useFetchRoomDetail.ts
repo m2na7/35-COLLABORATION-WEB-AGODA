@@ -1,9 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { instance } from "../instance";
 import { END_POINT } from "@utils/constants/api/api";
 import { queryKey } from "@utils/constants/api/queryKey";
-import { RoomDetailResponse } from '@app-types/hotelDetail';
-import { ApiResponse } from '@app-types/apiResponseType';
+import { RoomDetailResponse } from "@app-types/hotelDetail";
+import { ApiResponse } from "@app-types/apiResponseType";
 
 const getRoomDetail = async (hotelId: number) => {
   try {
@@ -17,7 +17,7 @@ const getRoomDetail = async (hotelId: number) => {
 };
 
 export const useFetchRoomDetail = (hotelId: number) => {
-  return useQuery({
+  return useSuspenseQuery({
     queryKey: [queryKey.ROOM_DETAIL, hotelId],
     queryFn: () => getRoomDetail(hotelId),
   });

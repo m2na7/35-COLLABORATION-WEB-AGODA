@@ -1,6 +1,6 @@
-import { IcMap } from '@assets/svg';
-import StarRating from '@components/StarRating/StarRating';
-import { iconStyle } from '@styles/iconStyles';
+import { IcMap } from "@assets/svg";
+import StarRating from "@components/StarRating/StarRating";
+import { iconStyle } from "@styles/iconStyles";
 import {
   timeSaleCardWrapper,
   timeSaleDescriptionWrapper,
@@ -11,10 +11,13 @@ import {
   timeSalePrice,
   timeSaleLocation,
   timeSaleRating,
-} from './TimeSaleCard.style';
+} from "./TimeSaleCard.style";
+import { useNavigate } from "react-router-dom";
+import routePath from "@routes/routePath";
 
 interface TimeSaleCardProps {
   hotel: {
+    hotelId: number;
     hotelName: string;
     star: number;
     hotelDistrict: string;
@@ -25,11 +28,16 @@ interface TimeSaleCardProps {
 }
 
 const TimeSaleCard = ({ hotel }: TimeSaleCardProps) => {
+  const navigate = useNavigate();
+  const handleCardClick = (hotelId: number) => {
+    navigate(routePath.HOTEL_DETAIL.replace(":hotelId", String(hotelId)));
+  };
+
   return (
-    <article css={timeSaleCardWrapper}>
+    <article css={timeSaleCardWrapper} onClick={() => handleCardClick(hotel.hotelId)}>
       <div>
         <img
-          src={hotel.hotelImage ?? 'https://placehold.co/144x180'}
+          src={hotel.hotelImage ?? "https://placehold.co/144x180"}
           css={timeSaleImage}
         />
       </div>
@@ -38,7 +46,7 @@ const TimeSaleCard = ({ hotel }: TimeSaleCardProps) => {
         <div css={timeSaleDetailWrapper}>
           <h3 css={timeSaleTitle}>{hotel.hotelName}</h3>
 
-          <StarRating rating={hotel.star} variant='default' />
+          <StarRating rating={hotel.star} variant="default" />
 
           <div css={timeSaleInfoWrapper}>
             <div css={timeSaleLocation}>
