@@ -11,9 +11,17 @@ import {
   HotelDetailContainer,
   HotelDetailLayout,
 } from "@pages/HotelDetailPage/HotelDetailPage.style";
+import RoomDescription from "@pages/HotelDetailPage/components/RoomDescription/RoomDescription";
 //import { HotelDetail } from "@app-types/hotelDetail";
 
 const HotelDetailPage = () => {
+  const handleScrollToTopButtonClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div css={HotelDetailLayout}>
       <div css={HotelDetailContainer}>
@@ -28,6 +36,7 @@ const HotelDetailPage = () => {
       </div>
 
       <RoomDetail />
+      <RoomDescription handleScrollToTopButtonClick={handleScrollToTopButtonClick}/>
     </div>
   );
 };
