@@ -12,7 +12,7 @@ const getCities = async (): Promise<CitiesResponse> => {
     );
     return response.data.data;
   } catch (error) {
-    throw new Error("데이터 패칭 실패");
+    throw error;
   }
 };
 
