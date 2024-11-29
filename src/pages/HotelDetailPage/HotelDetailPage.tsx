@@ -21,6 +21,7 @@ import {
 import { useFetchHotelDetail } from "@apis/hoteldetail/useFetchHotelDetail";
 import { useFetchRoomDetail } from "@apis/hoteldetail/useFetchRoomDetail";
 import RoomDescription from "@pages/HotelDetailPage/components/RoomDescription/RoomDescription";
+import { useEffect } from "react";
 
 const HotelDetailPage = () => {
   const { hotelId } = useParams();
@@ -39,6 +40,13 @@ const HotelDetailPage = () => {
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  }, []);
 
   return (
     <div css={HotelDetailLayout}>
