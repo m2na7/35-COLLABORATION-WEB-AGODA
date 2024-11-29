@@ -17,6 +17,7 @@ export { default as IcCheck } from "./IcCheck";
 export { default as IcCheckCoupon } from "./IcCheckCoupon";
 export { default as IcCheckin } from "./IcCheckin";
 export { default as IcCheckout } from "./IcCheckout";
+export { default as IcCitySearch } from "./IcCitySearch";
 export { default as IcClock } from "./IcClock";
 export { default as IcEmptyHeart } from "./IcEmptyHeart";
 export { default as IcFillHeart } from "./IcFillHeart";
