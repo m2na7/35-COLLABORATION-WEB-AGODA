@@ -1,5 +1,4 @@
 import { css, Theme } from "@emotion/react";
-import theme from "@styles/theme";
 
 export const HighlightsWrapper = css`
   margin: 0rem;
