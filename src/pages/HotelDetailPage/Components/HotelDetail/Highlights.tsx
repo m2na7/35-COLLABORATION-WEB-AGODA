@@ -9,7 +9,6 @@ import {
   BottomStyle,
 } from "./Highlights.style";
 import IcCheck from "@assets/svg/IcCheck";
-import { Vector48 } from "@assets/svg";
 
 const Highlights = () => {
   const leftItems = [
