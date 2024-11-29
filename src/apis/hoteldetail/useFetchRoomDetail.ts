@@ -12,8 +12,7 @@ const getRoomDetail = async (hotelId: number) => {
     );
     return response.data.data;
   } catch (error) {
-    console.error(error);
-    throw new Error('RoomDetail 데이터를 가져오지 못했습니다.');
+    throw error;
   }
 };
 
