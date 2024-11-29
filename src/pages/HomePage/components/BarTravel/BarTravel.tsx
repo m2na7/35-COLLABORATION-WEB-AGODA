@@ -21,7 +21,7 @@ import {
   checkLabelStyle,
   dateTextStyle,
   separatorStyle,
-  personIconStyle,
+  boxSpanStyle,
   cityTextStyle,
 } from "./BarTravel.style";
 
@@ -79,14 +79,18 @@ const BarTravel = () => {
       </div>
 
       <div css={boxStyle}>
-        <IcPerson css={[iconStyle(2, 2), personIconStyle]} />
+        <Spacing width={12} height={0} />
 
-        <span css={dynamicTextStyle}>1 </span>
-        <span css={textStyle}>객실, </span>
-        <span css={dynamicTextStyle}>2 </span>
-        <span css={textStyle}>성인, </span>
-        <span css={dynamicTextStyle}>0 </span>
-        <span css={textStyle}>아동</span>
+        <IcPerson css={[iconStyle(2, 2)]} />
+        <Spacing width={12} height={0} />
+        <div css={boxSpanStyle}>
+          <span css={dynamicTextStyle}>1 </span>
+          <span css={textStyle}>객실, </span>
+          <span css={dynamicTextStyle}>2 </span>
+          <span css={textStyle}>성인, </span>
+          <span css={dynamicTextStyle}>0 </span>
+          <span css={textStyle}>아동</span>
+        </div>
       </div>
 
       <Button variant="filled" disabled={!city} onClick={handleSearchClick}>
