@@ -11,7 +11,7 @@ const getHotelsList = async (
   saleType: "default" | "timeLimit"
 ): Promise<HotelListResponse> => {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 500));
     const response = await instance.get<ApiResponse<HotelListResponse>>(
       END_POINT.GET_HOTELS_LIST(cityId, saleType)
     );
@@ -36,6 +36,6 @@ export const useFetchHotelList = (
       );
       return { timeSaleHotels, nonTimeSaleHotels };
     },
-    staleTime: 5 * 60 * 1000,
+    staleTime: 0,
   });
 };
