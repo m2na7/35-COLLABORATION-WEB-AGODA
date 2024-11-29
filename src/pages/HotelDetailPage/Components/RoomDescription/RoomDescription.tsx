@@ -4,7 +4,7 @@ import RoomDescriptionCard from "@pages/HotelDetailPage/components/RoomDescripti
 import {
   HOTEL_DESCRIPTION,
   HOTEL_POLICY,
-} from "@utils/constants/hotelDetail/hotelInfoData";
+} from "@utils/constants/hotelDetail/hotelInfoData";      
 
 interface RoomDescriptionProps {
   handleScrollToTopButtonClick: () => void;
