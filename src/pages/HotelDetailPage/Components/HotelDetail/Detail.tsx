@@ -11,21 +11,27 @@ import {
   thumbsUpWrapper,
 } from "./Detail.style";
 
-const Detail = () => {
+interface DetailProps {
+  hotelName: string;
+  reservationCount: number;
+  star: number;
+}
+
+const Detail = ({ hotelName, reservationCount, star }: DetailProps) => {
   return (
     <div css={detailWrapper}>
       <span css={bestseller}>베스트셀러</span>
-      <h1 css={title}>호텔 파크하비오</h1>
+      <h1 css={title}>{hotelName}</h1>
       <div css={subtitleRow}>
         <div css={subtitle}>
           <span>호텔</span>
           <span css={starRating}>
-            <StarRating rating={3} />
+            <StarRating rating={star}/>
           </span>
         </div>
         <div css={thumbsUpWrapper}>
           <IcGood />
-          <span>오늘 111회 예약됨</span>
+          <span>오늘 {reservationCount}회 예약됨</span>
         </div>
       </div>
     </div>

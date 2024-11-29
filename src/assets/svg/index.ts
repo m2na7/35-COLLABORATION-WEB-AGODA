@@ -1,5 +1,7 @@
 export { default as Ellipse27 } from "./Ellipse27";
 export { default as Ellipse28 } from "./Ellipse28";
+export { default as Emptyheart } from "./Emptyheart";
+export { default as Fillheart } from "./Fillheart";
 export { default as Bestseller } from "./Bestseller";
 export { default as IcActivity } from "./IcActivity";
 export { default as IcBack } from "./IcBack";
@@ -10,6 +12,8 @@ export { default as IcBus } from "./IcBus";
 export { default as IcCalendar } from "./IcCalendar";
 export { default as IcCancle } from "./IcCancle";
 export { default as IcCar } from "./IcCar";
+export { default as IcCart } from "./IcCart";
+export { default as IcCart2 } from "./IcCart2";
 export { default as IcCarBus } from "./IcCarBus";
 export { default as IcCart } from "./IcCart";
 export { default as IcCart2 } from "./IcCart2";
