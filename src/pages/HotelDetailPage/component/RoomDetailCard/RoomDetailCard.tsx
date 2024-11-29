@@ -1,7 +1,7 @@
 import { RoomDataType } from "@app-types/hotelDetail";
 import { IcBath, IcBed, IcPeopleBlack, IcRoomBlack } from "@assets/svg";
 import Carousel from "@components/Carousel/Carousel";
-import { roomDetailCardContainer } from "@pages/HotelDetailPage/components/RoomDetail/RoomDetail.style";
+import { roomDetailCardContainer } from "@pages/HotelDetailPage/component/RoomDetail/RoomDetail.style";
 import {
   roomDetailCardLayout,
   roomDetailCarouselLabelStyle,
@@ -12,7 +12,7 @@ import {
   roomOptionTextStyle,
   roomOptionWrapper,
   roomTitleStyle,
-} from "@pages/HotelDetailPage/components/RoomDetailCard/RoomDetailCard.style";
+} from "@pages/HotelDetailPage/component/RoomDetailCard/RoomDetailCard.style";
 
 type RoomDetailCardProps = {
   roomData: RoomDataType;

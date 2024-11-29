@@ -8,7 +8,7 @@ import {
   RightListStyle,
   ServiceStyle,
   TitleStyle,
-} from "@pages/HotelDetailPage/components/HotelDetail/Highlights.style";
+} from "@pages/HotelDetailPage/component/HotelDetail/Highlights.style";
 
 const Highlights = () => {
   const leftItems = [

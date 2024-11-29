@@ -1,13 +1,13 @@
 import Button from "@components/Button/Button";
 import { titleStyle } from "@pages/HomePage/components/ListWithButton/ListWithButton.style";
 import {
-    allDescriptionStyle,
+  allDescriptionStyle,
   buttonWrapper,
   descriptionCardLayout,
   descriptionStyle,
   shortDescriptionStyle,
   textWrapper,
-} from "@pages/HotelDetailPage/components/RoomDescriptionCard/RoomDescriptionCard.style";
+} from "@pages/HotelDetailPage/component/RoomDescriptionCard/RoomDescriptionCard.style";
 import { HTMLProps, useState } from "react";
 
 interface RoomDescriptionCardProps extends HTMLProps<HTMLDivElement> {
@@ -25,7 +25,14 @@ const RoomDescriptionCard = ({ title, children }: RoomDescriptionCardProps) => {
     <div css={descriptionCardLayout}>
       <div css={textWrapper}>
         <span css={titleStyle}>{title}</span>
-        <span css={[descriptionStyle, isSpread ? allDescriptionStyle : shortDescriptionStyle]}>{children}</span>
+        <span
+          css={[
+            descriptionStyle,
+            isSpread ? allDescriptionStyle : shortDescriptionStyle,
+          ]}
+        >
+          {children}
+        </span>
       </div>
 
       <div css={buttonWrapper}>

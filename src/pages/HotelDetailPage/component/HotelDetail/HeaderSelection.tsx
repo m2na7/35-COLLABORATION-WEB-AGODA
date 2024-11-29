@@ -3,7 +3,7 @@ import {
   dateSelection,
   headerSelectionWrapper,
   iconWrapper,
-} from "@pages/HotelDetailPage/components/HotelDetail/HeaderSelection.style";
+} from "@pages/HotelDetailPage/component/HotelDetail/HeaderSelection.style";
 
 const HeaderSelection = () => {
   return (

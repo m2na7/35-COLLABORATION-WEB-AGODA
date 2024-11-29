@@ -1,4 +1,4 @@
-import { roomDetailChipLayout } from "@pages/HotelDetailPage/components/RoomDetailChip/RoomDetailChip.style";
+import { roomDetailChipLayout } from "@pages/HotelDetailPage/component/RoomDetailChip/RoomDetailChip.style";
 
 interface RoomDetailChipProps {
   chipText: string;

@@ -10,7 +10,7 @@ import {
   reviewsWrapper,
   reviewTitle,
   titleStyle,
-} from "@pages/HotelDetailPage/components/HotelDetail/TextReview.style";
+} from "@pages/HotelDetailPage/component/HotelDetail/TextReview.style";
 
 const TextReview = () => {
   const reviews = [

@@ -1,6 +1,18 @@
-
 import { IcHead2, Map } from "@assets/svg";
-import { Address, ContentWrapper, Header, IconWrapper, LocationWrapper, MapButton, MapContainer, NearbyContainer, NearbyItem, NearbyLink, NearbyList, Title } from "@pages/HotelDetailPage/components/HotelDetail/Location.style";
+import {
+  Address,
+  ContentWrapper,
+  Header,
+  IconWrapper,
+  LocationWrapper,
+  MapButton,
+  MapContainer,
+  NearbyContainer,
+  NearbyItem,
+  NearbyLink,
+  NearbyList,
+  Title,
+} from "@pages/HotelDetailPage/component/HotelDetail/Location.style";
 
 const Location = () => {
   const rating = 8.8;

@@ -5,7 +5,11 @@ import { instance } from "@apis/instance";
 
 import { Emptyheart, Fillheart } from "@assets/svg";
 import { queryKey } from "@utils/constants/api/queryKey";
-import { EmptyHeart, FillHeart, HeartWrapper } from "@pages/HotelDetailPage/components/HotelDetail/Like/IsLiked.style";
+import {
+  EmptyHeart,
+  FillHeart,
+  HeartWrapper,
+} from "@pages/HotelDetailPage/component/HotelDetail/Like/IsLiked.style";
 
 interface IsLikeProps {
   hotelId: number;

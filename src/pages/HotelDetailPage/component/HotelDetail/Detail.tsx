@@ -1,8 +1,14 @@
 import StarRating from "@components/StarRating/StarRating";
 import { IcGood } from "@assets/svg";
-import { bestseller, detailWrapper, starRating, subtitle, subtitleRow, thumbsUpWrapper, title } from "@pages/HotelDetailPage/components/HotelDetail/Detail.style";
-
-
+import {
+  bestseller,
+  detailWrapper,
+  starRating,
+  subtitle,
+  subtitleRow,
+  thumbsUpWrapper,
+  title,
+} from "@pages/HotelDetailPage/component/HotelDetail/Detail.style";
 
 interface DetailProps {
   hotelName: string;
@@ -19,7 +25,7 @@ const Detail = ({ hotelName, reservationCount, star }: DetailProps) => {
         <div css={subtitle}>
           <span>호텔</span>
           <span css={starRating}>
-            <StarRating rating={star}/>
+            <StarRating rating={star} />
           </span>
         </div>
         <div css={thumbsUpWrapper}>

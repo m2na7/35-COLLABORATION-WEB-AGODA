@@ -2,16 +2,16 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import Header from "@components/Header/Header";
-import Highlights from "@pages/HotelDetailPage/components/HotelDetail/Highlights";
-import RateReview from "@pages/HotelDetailPage/components/HotelDetail/RateReview";
-import Location from "@pages/HotelDetailPage/components/HotelDetail/Location";
+import Highlights from "@pages/HotelDetailPage/component/HotelDetail/Highlights";
+import RateReview from "@pages/HotelDetailPage/component/HotelDetail/RateReview";
+import Location from "@pages/HotelDetailPage/component/HotelDetail/Location";
 import HotelCarousel from "@components/Carousel/HotelCarousel";
-import Detail from "@pages/HotelDetailPage/components/HotelDetail/Detail";
-import TextReview from "@pages/HotelDetailPage/components/HotelDetail/TextReview";
-import HeaderSelection from "@pages/HotelDetailPage/components/HotelDetail/HeaderSelection";
-import RoomDetail from "@pages/HotelDetailPage/components/RoomDetail/RoomDetail";
-import IsLiked from "@pages/HotelDetailPage/components/HotelDetail/Like/IsLiked";
-import RoomDescription from "@pages/HotelDetailPage/components/RoomDescription/RoomDescription";
+import Detail from "@pages/HotelDetailPage/component/HotelDetail/Detail";
+import TextReview from "@pages/HotelDetailPage/component/HotelDetail/TextReview";
+import HeaderSelection from "@pages/HotelDetailPage/component/HotelDetail/HeaderSelection";
+import RoomDetail from "@pages/HotelDetailPage/component/RoomDetail/RoomDetail";
+import IsLiked from "@pages/HotelDetailPage/component/HotelDetail/Like/IsLiked";
+import RoomDescription from "@pages/HotelDetailPage/component/RoomDescription/RoomDescription";
 
 import {
   HotelDetailContainer,

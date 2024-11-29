@@ -15,7 +15,7 @@ import {
   RateText,
   RectangleBackground,
   TitleStyle,
-} from "@pages/HotelDetailPage/components/HotelDetail/RateReview.style";
+} from "@pages/HotelDetailPage/component/HotelDetail/RateReview.style";
 
 const RateReview = () => {
   const theme = useTheme();

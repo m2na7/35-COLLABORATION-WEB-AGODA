@@ -7,10 +7,10 @@ import {
   roomDetailLayout,
   roomDetailNumberTextStyle,
   roomDetailOneClickWrapper,
-} from "@pages/HotelDetailPage/components/RoomDetail/RoomDetail.style";
-import RoomDetailCard from "@pages/HotelDetailPage/components/RoomDetailCard/RoomDetailCard";
-import RoomDetailChip from "@pages/HotelDetailPage/components/RoomDetailChip/RoomDetailChip";
-import RoomDetailPriceCard from "@pages/HotelDetailPage/components/RoomDetailPriceCard/RoomDetailPriceCard";
+} from "@pages/HotelDetailPage/component/RoomDetail/RoomDetail.style";
+import RoomDetailCard from "@pages/HotelDetailPage/component/RoomDetailCard/RoomDetailCard";
+import RoomDetailChip from "@pages/HotelDetailPage/component/RoomDetailChip/RoomDetailChip";
+import RoomDetailPriceCard from "@pages/HotelDetailPage/component/RoomDetailPriceCard/RoomDetailPriceCard";
 import { ROOM_DETAIL_CHIP_DATA } from "@utils/constants/hotelDetail/roomDetailChipData";
 import { RoomDataType } from "@app-types/hotelDetail";
 
@@ -18,7 +18,7 @@ interface RoomDetailProps {
   roomData: RoomDataType[];
 }
 
-const RoomDetail = ({ roomData }:RoomDetailProps) => {
+const RoomDetail = ({ roomData }: RoomDetailProps) => {
   return (
     <div css={roomDetailLayout}>
       <section css={roomDetailOneClickWrapper}>

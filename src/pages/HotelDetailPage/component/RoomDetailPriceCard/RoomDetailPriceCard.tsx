@@ -21,7 +21,7 @@ import {
   priceCardLayout,
   priceInfoTextStyle,
   PriceInfoWrapper,
-} from "@pages/HotelDetailPage/components/RoomDetailPriceCard/RoomDetailPriceCard.style";
+} from "@pages/HotelDetailPage/component/RoomDetailPriceCard/RoomDetailPriceCard.style";
 import { ROOM_DETAIL_CARD_PRICE_DATA } from "@utils/constants/hotelDetail/roomDetailPriceData";
 
 const RoomDetailPriceCard = () => {

@@ -1,10 +1,10 @@
 import Button from "@components/Button/Button";
-import { roomDescriptionLayout } from "@pages/HotelDetailPage/components/RoomDescription/RoomDescription.style";
-import RoomDescriptionCard from "@pages/HotelDetailPage/components/RoomDescriptionCard/RoomDescriptionCard";
+import { roomDescriptionLayout } from "@pages/HotelDetailPage/component/RoomDescription/RoomDescription.style";
+import RoomDescriptionCard from "@pages/HotelDetailPage/component/RoomDescriptionCard/RoomDescriptionCard";
 import {
   HOTEL_DESCRIPTION,
   HOTEL_POLICY,
-} from "@utils/constants/hotelDetail/hotelInfoData";      
+} from "@utils/constants/hotelDetail/hotelInfoData";
 
 interface RoomDescriptionProps {
   handleScrollToTopButtonClick: () => void;
