@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { instance } from "@apis/instance";
 import { END_POINT } from "@utils/constants/api/api";
-import { HotelDetail } from "@app-types/hotelDetail";
 
 const getHotelDetail = async (hotelId: number) => {
   try {
