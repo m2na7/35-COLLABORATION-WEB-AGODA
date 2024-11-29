@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import Header from "@components/Header/Header";
@@ -9,7 +10,8 @@ import Detail from "@pages/HotelDetailPage/components/HotelDetail/Detail";
 import TextReview from "@pages/HotelDetailPage/components/HotelDetail/TextReview";
 import HeaderSelection from "@pages/HotelDetailPage/components/HotelDetail/HeaderSelection";
 import RoomDetail from "@pages/HotelDetailPage/components/RoomDetail/RoomDetail";
-import IsLiked from "./components/HotelDetail/Like/IsLiked";
+import IsLiked from "@pages/HotelDetailPage/components/HotelDetail/Like/IsLiked";
+import RoomDescription from "@pages/HotelDetailPage/components/RoomDescription/RoomDescription";
 
 import {
   HotelDetailContainer,
@@ -20,8 +22,6 @@ import {
 
 import { useFetchHotelDetail } from "@apis/hoteldetail/useFetchHotelDetail";
 import { useFetchRoomDetail } from "@apis/hoteldetail/useFetchRoomDetail";
-import RoomDescription from "@pages/HotelDetailPage/components/RoomDescription/RoomDescription";
-import { useEffect } from "react";
 
 const HotelDetailPage = () => {
   const { hotelId } = useParams();
