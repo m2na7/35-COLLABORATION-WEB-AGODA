@@ -114,9 +114,3 @@ agoda의 주요 기능을 모바일 웹 화면에 최적화된 UI/UX로 구현�
 ```
 ## 🌊 기술 스택
 [![My Skills](https://skillicons.dev/icons?i=html,css,react,ts,emotion,react-query)](https://skillicons.dev)
-
-
-## 🌊 단체 사진
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/9d81d67b-3cbb-4f9f-b322-9b3600c7d9a7"  width="600" height="800"/>
-</div>
